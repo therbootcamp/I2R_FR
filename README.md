@@ -1,1 +1,5 @@
-# I2R_2022Oct
+# Applied ML @ Basel January 2019
+
+Notes (aka todo):
+
+Everything!

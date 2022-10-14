@@ -68,9 +68,9 @@ options(digits = 4)
 
 <br><br><br><br><br>
 
-# Hallo Base R Experten
+# Glückwunsch!
 
-Nach einem Nachmittag kennt Ihr die Grundlagen von R!
+Ihr nun die Grundlagen von R!
 
 ]
 
@@ -900,7 +900,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
 .pull-right45[
 
 <p align="center"><br><br>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfcLt0SC6GoEn6HlxoR92E2tdHioRyPu-r8bielt2uAmudZqw/viewform?embedded=true" width="430" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQ0smc25FL4IpNqi52gtdGG5zeozqSiNuxymtcuKRCbUtiFA/viewform?embedded=true" width="430" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p>
 
 ]
 

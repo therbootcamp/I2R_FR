@@ -299,15 +299,6 @@ workspace und history speichern &#9679; projektspezifische Optionen setzen &#967
 
 ]
 
-
----
-
-class: middle, center
-
-<i>Schon runtergeladen?</i>
-
-<h1><a href="https://www.dropbox.com/s/38mye50cvkx1bhd/TheRBootcamp.zip?dl=1" download>Projekt</a></h1>
-
 ---
 
 class: middle, center

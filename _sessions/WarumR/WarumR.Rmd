@@ -287,7 +287,7 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
   <img src="image/RvsPython.png" height = 300px><br>
   <font style="font-size:10px">from <a href="https://www.sharpsightlabs.com/blog/r-vs-python/">sharpsightlabs.com</a></font>
 
----
+<!---
 
 # Nachfrage
 
@@ -308,8 +308,6 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
 
 ]
 
-
-<!---
 
 # Charakterzüge <font style="font-size:16px">siehe auch diese <a href="image/rversuspython.jpeg">Infographik</a>
 

@@ -110,8 +110,8 @@ Klicke auf <high>"....running..."</high> auf unserer Website!
 # Agenda
 
 <ul>
-  <li class="m1"><span>L'atelier comprend cinq <high>blocs R d'une demi-heure </high>(en gris).</span></li>
-  <li class="m2"><span>Blöcke</span></li>
+  <li class="m1"><span>L'atelier comprend cinq blocs R d'une demi-heure (en gris).</span></li>
+  <li class="m2"><span>Chaque bloc contient:</span></li>
   <ul class="level">
     <li><span><high>Introduction </high>basée sur slides (10min)</span></li> 
     <li><span><high>Exercice </high>individuel (15min)</span></li> 
@@ -157,6 +157,6 @@ Klicke auf <high>"....running..."</high> auf unserer Website!
 ---
 class: middle, center
 
-<h1><a href=https://therbootcamp.github.io/I2R_2022Apr/index.html>Agenda</a></h1>
+<h1><a href="https://j-ramalho.github.io/I2R_FR/index.html" >Agenda</a></h1>
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Willkommen!"
-author: "Einführung in die moderne Datenanalyse mit R<br>
+title: "Bonjour!"
+author: "Introduction à l'analyse de données avec R<br>
   <a href='https://therbootcamp.github.io'>
     The R Bootcamp
   </a>
   <br>
-  <a href='https://therbootcamp.github.io/I2R_2022Oct/'>
+  <a href='https://j-ramalho.github.io/I2R_FR/'>
     <i class='fas fa-clock' style='font-size:.9em;'></i>
   </a>&#8239; 
   <a href='https://therbootcamp.github.io'>
@@ -17,7 +17,7 @@ author: "Einführung in die moderne Datenanalyse mit R<br>
   <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
     <i class='fab fa-linkedin' style='font-size: .9em;'></i>
   </a>"
-date: "Oktober 2022"
+date: "Juin 2023"
 output:
   xaringan::moon_reader:
     css: ["default", "baselrbootcamp.css"]
@@ -88,10 +88,10 @@ Klicke auf <high>"....running..."</high> auf unserer Website!
 <br><br><br><br><br>
 
 
-# Ziel
+# Objectif
 
 
->###Das Ziel dieses Kurses ist es Euch die Grundlagen der Programmiersprache R und einen Überblick über Einsatzmäglichkeiten zu bieten. 
+>###Le but de ce cours est de vous fournir les bases du langage de programmation R et un aperçu des applications possibles. 
 
 ]
 
@@ -107,15 +107,15 @@ Klicke auf <high>"....running..."</high> auf unserer Website!
 .pull-left45[
 
 <br>
-# Schedule 
+# Agenda
 
 <ul>
-  <li class="m1"><span>Der Workshop beinhaltet fünf <high>halbstündige R Blöcke</high> (in grau).</span></li>
+  <li class="m1"><span>L'atelier comprend cinq <high>blocs R d'une demi-heure </high>(en gris).</span></li>
   <li class="m2"><span>Blöcke</span></li>
   <ul class="level">
-    <li><span>Folien-basierten <high>Einführung (10min)</high></span></li> 
-    <li><span>Selbsständige <high>Übung (15min)</high></span></li> 
-    <li><span>Interaktive <high>Lösungen (5min)</high></span></li> 
+    <li><span><high>Introduction </high>basée sur slides (10min)</span></li> 
+    <li><span><high>Exercice </high>individuel (15min)</span></li> 
+    <li><span><high>Solution </high>interactive (5min)</span></li> 
   </ul>
 </ul>
 
@@ -132,13 +132,13 @@ Klicke auf <high>"....running..."</high> auf unserer Website!
 
 ---
 
-# Vorstellungsrunde
+# Tour de table
 
 .pull-left5[
 
 <ul>
-  <li class="m1"><span>Wer bist du?</span></li>
-  <li class="m2"><span>Warum möchtest Du R lernen?</span></li>
+  <li class="m1"><span>Présentation (employeur, profession)</span></li>
+  <li class="m2"><span>Pourquoi voulez-vous apprendre R?</span></li>
 </ul>
 
 
@@ -157,6 +157,6 @@ Klicke auf <high>"....running..."</high> auf unserer Website!
 ---
 class: middle, center
 
-<h1><a href=https://therbootcamp.github.io/I2R_2022Apr/index.html>Schedule</a></h1>
+<h1><a href=https://therbootcamp.github.io/I2R_2022Apr/index.html>Agenda</a></h1>
 
 

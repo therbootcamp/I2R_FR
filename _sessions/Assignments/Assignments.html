@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Assignments</title>
+    <title>Assignations</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Einführung in die moderne Datenanalyse mit R   The R Bootcamp                  " />
+    <meta name="author" content="Introduction à l’analyse de données avec R   The R Bootcamp                  " />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="baselrbootcamp.css" type="text/css" />
@@ -13,13 +13,13 @@
 class: center, middle, inverse, title-slide
 
 .title[
-# Assignments
+# Assignations
 ]
 .author[
-### Einführung in die moderne Datenanalyse mit R<br> <a href='https://therbootcamp.github.io'> The R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_2022Oct/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
+### Introduction à l’analyse de données avec R<br> <a href='https://therbootcamp.github.io'> The R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_2022Oct/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
 ]
 .date[
-### Oktober 2022
+### Juin 2023
 ]
 
 ---
@@ -56,18 +56,17 @@ layout: true
 
 # Agenda
 
-
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2"&gt;&lt;span&gt;&lt;high&gt;Assignments&lt;/high&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2"&gt;&lt;span&gt;&lt;high&gt;Assignations&lt;/high&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Object &lt;mono&gt;&lt;-&lt;/mono&gt; Fonction&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; change un Objekte&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -84,21 +83,21 @@ layout: true
 
 ---
 
-# Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion
+# Object &lt;mono&gt;&lt;-&lt;/mono&gt; Fonction
 
 .pull-left5[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Object &lt;mono&gt;&lt;-&lt;/mono&gt; Fonction&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; change un Object&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -115,21 +114,21 @@ layout: true
 
 ---
 
-# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
+# &lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object
 
 .pull-left5[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Object &lt;mono&gt;&lt;-&lt;/mono&gt; Fonction&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; change un Object&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -138,11 +137,11 @@ layout: true
 .pull-right5[
 
 ```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
+# un object nommé one_two_three
+one_two_three &lt;- c(1, 2, 3)
 
-# Printe das Objekt
-print(eins_zwei_drei)
+# imprimer l'object
+print(one_two_three)
 ```
 
 ```
@@ -150,8 +149,8 @@ print(eins_zwei_drei)
 ```
 
 ```r
-# Printe das Objekt
-eins_zwei_drei
+# imprimer l'object
+one_two_three
 ```
 
 ```
@@ -162,21 +161,21 @@ eins_zwei_drei
 
 ---
 
-# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
+# &lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object
 
 .pull-left5[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Object &lt;mono&gt;&lt;-&lt;/mono&gt; Fonction&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; change un Object&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -185,11 +184,11 @@ eins_zwei_drei
 .pull-right5[
 
 ```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
+# un object nommé one_two_three
+one_two_three &lt;- c(1, 2, 3)
 
-# Berechne den Mittelwert
-mean(eins_zwei_drei)
+# calculer la moyenne
+mean(one_two_three)
 ```
 
 ```
@@ -200,21 +199,21 @@ mean(eins_zwei_drei)
 
 ---
 
-# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
+# &lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object
 
 .pull-left5[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Object &lt;mono&gt;&lt;-&lt;/mono&gt; Fonction&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; change un Object&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -223,14 +222,14 @@ mean(eins_zwei_drei)
 .pull-right5[
 
 ```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
+# un object nommé one_two_three
+one_two_three &lt;- c(1, 2, 3)
 
-# Berechne den Mittelwert
-ergebnis &lt;- mean(eins_zwei_drei)
+# calculer la moyenne
+result &lt;- mean(one_two_three)
 
-# Printe Ergebnis
-ergebnis
+# imprimer le résultat
+result
 ```
 
 ```
@@ -241,21 +240,21 @@ ergebnis
 
 ---
 
-# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
+# &lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object
 
 .pull-left5[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Object &lt;mono&gt;&lt;-&lt;/mono&gt; Fonction&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; change un Object&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -264,14 +263,14 @@ ergebnis
 .pull-right5[
 
 ```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
+# un object nommé one_two_three
+one_two_three &lt;- c(1, 2, 3)
 
-# Berechne den Mittelwert
-ergebnis &lt;- mean(eins_zwei_drei)
+# calculer la moyenne
+result &lt;- mean(one_two_three)
 
-# Benutze Ergebnis
-ergebnis * 10
+# utiliser le résultat
+result * 10
 ```
 
 ```
@@ -283,21 +282,21 @@ ergebnis * 10
 
 ---
 
-# &lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte
+# &lt;mono&gt;&lt;-&lt;/mono&gt; change un Object
 
 .pull-left5[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Object &lt;mono&gt;&lt;-&lt;/mono&gt; Fonction&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; change un Object&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -306,11 +305,11 @@ ergebnis * 10
 .pull-right5[
 
 ```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
+# un object nommé one_two_three
+one_two_three &lt;- c(1, 2, 3)
 
-# Printe das Objekt
-eins_zwei_drei
+# imprimer l'object
+one_two_three
 ```
 
 ```
@@ -318,8 +317,8 @@ eins_zwei_drei
 ```
 
 ```r
-# Printe das Objekt
-eins_zwei_drei + 100
+# imprimer l'object + 100
+one_two_three + 100
 ```
 
 ```
@@ -327,8 +326,8 @@ eins_zwei_drei + 100
 ```
 
 ```r
-# Printe das Objekt
-eins_zwei_drei
+# imprimer l'object
+one_two_three
 ```
 
 ```
@@ -340,21 +339,21 @@ eins_zwei_drei
 
 ---
 
-# &lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte
+# &lt;mono&gt;&lt;-&lt;/mono&gt; change un Object
 
 .pull-left5[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Object &lt;mono&gt;&lt;-&lt;/mono&gt; Fonction&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; crée un Object&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; change un Object&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -363,11 +362,11 @@ eins_zwei_drei
 .pull-right5[
 
 ```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
+# un object nommé one_two_three
+one_two_three &lt;- c(1, 2, 3)
 
-# Printe das Objekt
-eins_zwei_drei
+# imprimer l'object
+one_two_three
 ```
 
 ```
@@ -375,11 +374,11 @@ eins_zwei_drei
 ```
 
 ```r
-# Printe das Objekt
-eins_zwei_drei &lt;- eins_zwei_drei + 100
+# changer l'object
+one_two_three &lt;- one_two_three + 100
 
-# Printe das Objekt
-eins_zwei_drei
+# imprimer l'object
+one_two_three
 ```
 
 ```

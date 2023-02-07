@@ -1,6 +1,6 @@
 ---
-title: "Warum R?"
-author: "Einführung in die moderne Datenanalyse mit R<br>
+title: "Pourquoi R?"
+author: "Introduction à l'analyse de données avec R<br>
   <a href='https://therbootcamp.github.io'>
     The R Bootcamp
   </a>
@@ -17,7 +17,7 @@ author: "Einführung in die moderne Datenanalyse mit R<br>
   <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
     <i class='fab fa-linkedin' style='font-size: .9em;'></i>
   </a>"
-date: "Oktober 2022"
+date: "Juin 2023"
 output:
   xaringan::moon_reader:
     css: ["default", "baselrbootcamp.css"]
@@ -62,7 +62,7 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
 ```
 
 
-#  Die Datenrevolution
+#  La révolution des données
 
 
 <p align = "center">
@@ -73,7 +73,7 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
 
 .pull-left2[
 
-#  Datenanalysten gesucht
+#  Analystes de données recherché(e)s
 
 ]
 
@@ -82,7 +82,7 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
 <p align = "center">
   <br><br>
   <img src="image/jobs2022.png" height = 520px><br>
-  <font style="font-size:10px">adapted from <a href="https://www.weforum.org/agenda/2018/09/future-of-jobs-2018-things-to-know/">weforum.org</a></font>
+  <font style="font-size:10px">adapté de <a href="https://www.weforum.org/agenda/2018/09/future-of-jobs-2018-things-to-know/">weforum.org</a></font>
 </p>
 
 ]
@@ -147,29 +147,29 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
 
 ---
 
-# Die 3 Säulen der Datenrevolution
+# Les trois pilliers de la révolution des données
 
 <table class="tg"  style="cellspacing:0; cellpadding:0; border:none;">
 <tr valign="top">
   <td style="padding:10px">
   <p align = "center">
-  <font style="font-size:28px"><i>Data</i></font><br><br>
+  <font style="font-size:28px"><i>Données</i></font><br><br>
   <img src="image/data.png" height = 260px width=300px style="border-radius:20%"><br>
-  <font style="font-size:10px">adapted from <a href="https://www.rathenau.nl/en/digital-society/data-driven-cities">rathenau.nl</a></font>
+  <font style="font-size:10px">adapté de <a href="https://www.rathenau.nl/en/digital-society/data-driven-cities">rathenau.nl</a></font>
 </p>
   </td>
   <td style="padding:10px">
   <p align = "center">
-  <font style="font-size:28px"><i>Computing</i></font><br><br>
+  <font style="font-size:28px"><i>Computation</i></font><br><br>
   <img src="image/server.png" height = 260px width=300px style="border-radius:20%"><br>
-  <font style="font-size:10px">adapted from <a href="https://cei.org/file/internet-server-farm">cei.org</a></font>
+  <font style="font-size:10px">adapté de <a href="https://cei.org/file/internet-server-farm">cei.org</a></font>
 </p>
   </td>
   <td style="padding:10px">
   <p align = "center">
-  <font style="font-size:28px"><i>Tools</i></font><br><br>
+  <font style="font-size:28px"><i>Outils</i></font><br><br>
   <img src="image/code.png" height = 260px width=300px style="border-radius:20%"><br>
-  <font style="font-size:10px">adapted from <a href="https://www.ionos.de/digitalguide/websites/web-entwicklung/code-editoren/">ionos.de</a></font>
+  <font style="font-size:10px">adapté de <a href="https://www.ionos.de/digitalguide/websites/web-entwicklung/code-editoren/">ionos.de</a></font>
 </p>
   </td>
 </tr>
@@ -215,12 +215,12 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
 
 ---
 
-# Immer mehr (gute) tools
+# Toujours plus de (bons) outils
 
 
 <p align = "center">
   <img src="image/bigdatalandscape.png" height = 460px><br>
-  <font style="font-size:10px">adapted from <a href="https://mattturck.com/data2019/">mattturck.com</a></font>
+  <font style="font-size:10px">adapté de <a href="https://mattturck.com/data2019/">mattturck.com</a></font>
 </p>
 
 ---
@@ -280,12 +280,12 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
 
 --->
 
-# Dominante Tools
+# Outils dominants
 
 <br><br>
 <p align = "center">
   <img src="image/RvsPython.png" height = 300px><br>
-  <font style="font-size:10px">from <a href="https://www.sharpsightlabs.com/blog/r-vs-python/">sharpsightlabs.com</a></font>
+  <font style="font-size:10px">de <a href="https://www.sharpsightlabs.com/blog/r-vs-python/">sharpsightlabs.com</a></font>
 
 <!---
 
@@ -409,7 +409,7 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
 
 ---
 
-# R bleibt relevant
+# R reste pertinent
 <br>
 <table class="tg"  style="cellspacing:0; cellpadding:0; border:none;" width="95%">
 <col width="25%">
@@ -420,21 +420,21 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
   <p align = "center">
   <font style="font-size:28px"><i>R</i></font><br><br>
   <img src="image/R.png" height = 130px><br>
-  <font style="font-size:10px">adapted from <a href="https://cei.org/file/internet-server-farm">cei.org</a></font>
+  <font style="font-size:10px">adapté de <a href="https://cei.org/file/internet-server-farm">cei.org</a></font>
   </p>
   </td>
   <td style="padding:20px">
   <p align = "center">
   <font style="font-size:28px"><i>RStudio</i></font><br><br>
   <img src="image/rstudio2.png" height = 130px><br>
-  <font style="font-size:10px">adapted from <a href="https://rstudio.com/">rstudio.com</a></font>
+  <font style="font-size:10px">adapté de <a href="https://rstudio.com/">rstudio.com</a></font>
 </p>
   </td>
   <td style="padding:20px">
   <p align = "center">
   <font style="font-size:28px"><i>R Packages</i></font><br><br>
   <img src="image/packages.png" height = 130px><br>
-  <font style="font-size:10px">adapted from <a href="https://towardsdatascience.com/ten-random-useful-things-in-r-that-you-might-not-know-about-54b2044a3868">towardsdatascience.com</a></font>
+  <font style="font-size:10px">adapté de <a href="https://towardsdatascience.com/ten-random-useful-things-in-r-that-you-might-not-know-about-54b2044a3868">towardsdatascience.com</a></font>
 </p>
   </td>
 </tr>
@@ -443,4 +443,4 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
 ---
 class: middle, center
 
-<h1><a href=https://therbootcamp.github.io/I2R_FR/index.html>Schedule</a></h1>
+<h1><a href=https://therbootcamp.github.io/I2R_FR/index.html>Agenda</a></h1>

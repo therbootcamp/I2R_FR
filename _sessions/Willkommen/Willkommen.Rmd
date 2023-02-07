@@ -1,11 +1,11 @@
 ---
-title: "Bonjour!"
+title: "Bienvenue!"
 author: "Introduction à l'analyse de données avec R<br>
   <a href='https://therbootcamp.github.io'>
     The R Bootcamp
   </a>
   <br>
-  <a href='https://j-ramalho.github.io/I2R_FR/'>
+  <a href='https://therbootcamp.github.io/I2R_FR/'>
     <i class='fas fa-clock' style='font-size:.9em;'></i>
   </a>&#8239; 
   <a href='https://therbootcamp.github.io'>
@@ -113,9 +113,9 @@ Klicke auf <high>"....running..."</high> auf unserer Website!
   <li class="m1"><span>L'atelier comprend cinq blocs R d'une demi-heure (en gris).</span></li>
   <li class="m2"><span>Chaque bloc contient:</span></li>
   <ul class="level">
-    <li><span><high>Introduction </high>basée sur slides (10min)</span></li> 
-    <li><span><high>Exercice </high>individuel (15min)</span></li> 
-    <li><span><high>Solution </high>interactive (5min)</span></li> 
+    <li><span><b>Introduction </b>basée sur slides (10min)</span></li> 
+    <li><span><b>Exercice </b>individuel (15min)</span></li> 
+    <li><span><b>Solution </b>interactive (5min)</span></li> 
   </ul>
 </ul>
 
@@ -157,6 +157,6 @@ Klicke auf <high>"....running..."</high> auf unserer Website!
 ---
 class: middle, center
 
-<h1><a href="https://j-ramalho.github.io/I2R_FR/index.html" >Agenda</a></h1>
+<h1><a href="https://therbootcamp.github.io/I2R_FR/index.html" >Agenda</a></h1>
 
 

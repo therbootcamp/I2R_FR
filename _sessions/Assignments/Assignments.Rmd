@@ -1,6 +1,6 @@
 ---
-title: "Assignments"
-author: "Einführung in die moderne Datenanalyse mit R<br>
+title: "Assignations"
+author: "Introduction à l'analyse de données avec R<br>
   <a href='https://therbootcamp.github.io'>
     The R Bootcamp
   </a>
@@ -17,7 +17,7 @@ author: "Einführung in die moderne Datenanalyse mit R<br>
   <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
     <i class='fab fa-linkedin' style='font-size: .9em;'></i>
   </a>"
-date: "Oktober 2022"
+date: "Juin 2023"
 output:
   xaringan::moon_reader:
     css: ["default", "baselrbootcamp.css"]
@@ -71,18 +71,17 @@ require(tidyverse)
 
 # Agenda
 
-
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2"><span><high>Assignments</high><br></span></li>
+  <li class="m2"><span><high>Assignations</high><br></span></li>
   <ul class="level">
-    <li><span>Objekt <mono><-</mono> Funktion</span></li>
-    <li><span><mono><-</mono> kreiert Objekte</span></li>
-    <li><span><mono><-</mono> verändert Objekte</span></li>
+    <li><span>Object <mono><-</mono> Fonction</span></li>
+    <li><span><mono><-</mono> crée un Object</span></li>
+    <li><span><mono><-</mono> change un Objekte</span></li>
   </ul>
   </span><br>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 
@@ -99,21 +98,21 @@ require(tidyverse)
 
 ---
 
-# Objekt <mono><-</mono> Funktion
+# Object <mono><-</mono> Fonction
 
 .pull-left5[
 
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2"><span>Assignments<br></span></li>
+  <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span><high>Objekt <mono><-</mono> Funktion</high></span></li>
-    <li><span><mono><-</mono> kreiert Objekte</span></li>
-    <li><span><mono><-</mono> verändert Objekte</span></li>
+    <li><span><high>Object <mono><-</mono> Fonction</high></span></li>
+    <li><span><mono><-</mono> crée un Object</span></li>
+    <li><span><mono><-</mono> change un Object</span></li>
   </ul>
   </span><br>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 
@@ -130,21 +129,21 @@ require(tidyverse)
 
 ---
 
-# <mono><-</mono> kreiert Objekte
+# <mono><-</mono> crée un Object
 
 .pull-left5[
 
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2"><span>Assignments<br></span></li>
+  <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span>Objekt <mono><-</mono> Funktion</span></li>
-    <li><span><high><mono><-</mono> kreiert Objekte</high></span></li>
-    <li><span><mono><-</mono> verändert Objekte</span></li>
+    <li><span>Object <mono><-</mono> Fonction</span></li>
+    <li><span><high><mono><-</mono> crée un Object</high></span></li>
+    <li><span><mono><-</mono> change un Object</span></li>
   </ul>
   </span><br>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 
@@ -152,14 +151,14 @@ require(tidyverse)
 
 .pull-right5[
 ```{r}
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
+# un object nommé one_two_three
+one_two_three <- c(1, 2, 3)
 
-# Printe das Objekt
-print(eins_zwei_drei)
+# imprimer l'object
+print(one_two_three)
 
-# Printe das Objekt
-eins_zwei_drei
+# imprimer l'object
+one_two_three
 
 ```
 
@@ -167,21 +166,21 @@ eins_zwei_drei
 
 ---
 
-# <mono><-</mono> kreiert Objekte
+# <mono><-</mono> crée un Object
 
 .pull-left5[
 
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2"><span>Assignments<br></span></li>
+  <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span>Objekt <mono><-</mono> Funktion</span></li>
-    <li><span><high><mono><-</mono> kreiert Objekte</high></span></li>
-    <li><span><mono><-</mono> verändert Objekte</span></li>
+    <li><span>Object <mono><-</mono> Fonction</span></li>
+    <li><span><high><mono><-</mono> crée un Object</high></span></li>
+    <li><span><mono><-</mono> change un Object</span></li>
   </ul>
   </span><br>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 
@@ -189,32 +188,32 @@ eins_zwei_drei
 
 .pull-right5[
 ```{r}
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
+# un object nommé one_two_three
+one_two_three <- c(1, 2, 3)
 
-# Berechne den Mittelwert
-mean(eins_zwei_drei)
+# calculer la moyenne
+mean(one_two_three)
 ```
 
 ]
 
 ---
 
-# <mono><-</mono> kreiert Objekte
+# <mono><-</mono> crée un Object
 
 .pull-left5[
 
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2"><span>Assignments<br></span></li>
+  <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span>Objekt <mono><-</mono> Funktion</span></li>
-    <li><span><high><mono><-</mono> kreiert Objekte</high></span></li>
-    <li><span><mono><-</mono> verändert Objekte</span></li>
+    <li><span>Object <mono><-</mono> Fonction</span></li>
+    <li><span><high><mono><-</mono> crée un Object</high></span></li>
+    <li><span><mono><-</mono> change un Object</span></li>
   </ul>
   </span><br>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 
@@ -222,35 +221,35 @@ mean(eins_zwei_drei)
 
 .pull-right5[
 ```{r}
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
+# un object nommé one_two_three
+one_two_three <- c(1, 2, 3)
 
-# Berechne den Mittelwert
-ergebnis <- mean(eins_zwei_drei)
+# calculer la moyenne
+result <- mean(one_two_three)
 
-# Printe Ergebnis
-ergebnis
+# imprimer le résultat
+result
 ```
 
 ]
 
 ---
 
-# <mono><-</mono> kreiert Objekte
+# <mono><-</mono> crée un Object
 
 .pull-left5[
 
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2"><span>Assignments<br></span></li>
+  <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span>Objekt <mono><-</mono> Funktion</span></li>
-    <li><span><high><mono><-</mono> kreiert Objekte</high></span></li>
-    <li><span><mono><-</mono> verändert Objekte</span></li>
+    <li><span>Object <mono><-</mono> Fonction</span></li>
+    <li><span><high><mono><-</mono> crée un Object</high></span></li>
+    <li><span><mono><-</mono> change un Object</span></li>
   </ul>
   </span><br>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 
@@ -258,55 +257,14 @@ ergebnis
 
 .pull-right5[
 ```{r}
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
+# un object nommé one_two_three
+one_two_three <- c(1, 2, 3)
 
-# Berechne den Mittelwert
-ergebnis <- mean(eins_zwei_drei)
+# calculer la moyenne
+result <- mean(one_two_three)
 
-# Benutze Ergebnis
-ergebnis * 10
-```
-
-]
-
-
----
-
-# <mono><-</mono> verändert Objekte
-
-.pull-left5[
-
-<ul>
-  <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2"><span>Assignments<br></span></li>
-  <ul class="level">
-    <li><span>Objekt <mono><-</mono> Funktion</span></li>
-    <li><span><mono><-</mono> kreiert Objekte</span></li>
-    <li><span><high><mono><-</mono> verändert Objekte</high></span></li>
-  </ul>
-  </span><br>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
-  <li class="m5g"><span>Analyse</span></li>
-</ul>
-
-]
-
-.pull-right5[
-```{r}
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
-
-# Printe das Objekt
-eins_zwei_drei
-
-# Printe das Objekt
-eins_zwei_drei + 100
-
-# Printe das Objekt
-eins_zwei_drei
-
+# utiliser le résultat
+result * 10
 ```
 
 ]
@@ -314,21 +272,21 @@ eins_zwei_drei
 
 ---
 
-# <mono><-</mono> verändert Objekte
+# <mono><-</mono> change un Object
 
 .pull-left5[
 
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2"><span>Assignments<br></span></li>
+  <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span>Objekt <mono><-</mono> Funktion</span></li>
-    <li><span><mono><-</mono> kreiert Objekte</span></li>
-    <li><span><high><mono><-</mono> verändert Objekte</high></span></li>
+    <li><span>Object <mono><-</mono> Fonction</span></li>
+    <li><span><mono><-</mono> crée un Object</span></li>
+    <li><span><high><mono><-</mono> change un Object</high></span></li>
   </ul>
   </span><br>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 
@@ -336,17 +294,58 @@ eins_zwei_drei
 
 .pull-right5[
 ```{r}
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
+# un object nommé one_two_three
+one_two_three <- c(1, 2, 3)
 
-# Printe das Objekt
-eins_zwei_drei
+# imprimer l'object
+one_two_three
 
-# Printe das Objekt
-eins_zwei_drei <- eins_zwei_drei + 100
+# imprimer l'object + 100
+one_two_three + 100
 
-# Printe das Objekt
-eins_zwei_drei
+# imprimer l'object
+one_two_three
+
+```
+
+]
+
+
+---
+
+# <mono><-</mono> change un Object
+
+.pull-left5[
+
+<ul>
+  <li class="m1g"><span>R(Studio)</span></li>
+  <li class="m2"><span>Assignations<br></span></li>
+  <ul class="level">
+    <li><span>Object <mono><-</mono> Fonction</span></li>
+    <li><span><mono><-</mono> crée un Object</span></li>
+    <li><span><high><mono><-</mono> change un Object</high></span></li>
+  </ul>
+  </span><br>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
+  <li class="m5g"><span>Analyse</span></li>
+</ul>
+
+]
+
+.pull-right5[
+```{r}
+# un object nommé one_two_three
+one_two_three <- c(1, 2, 3)
+
+# imprimer l'object
+one_two_three
+
+# changer l'object
+one_two_three <- one_two_three + 100
+
+# imprimer l'object
+one_two_three
 
 ```
 

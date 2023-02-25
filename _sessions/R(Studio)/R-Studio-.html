@@ -3,7 +3,7 @@
   <head>
     <title>R(Studio)</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Einführung in die moderne Datenanalyse mit R   The R Bootcamp                  " />
+    <meta name="author" content="Introduction à l’analyse de données avec R   The R Bootcamp                  " />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="baselrbootcamp.css" type="text/css" />
@@ -16,10 +16,10 @@ class: center, middle, inverse, title-slide
 # R(Studio)
 ]
 .author[
-### Einführung in die moderne Datenanalyse mit R<br> <a href='https://therbootcamp.github.io'> The R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_2022Oct/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
+### Introduction à l’analyse de données avec R<br> <a href='https://therbootcamp.github.io'> The R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_FR/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
 ]
 .date[
-### Oktober 2022
+### Juin 2023
 ]
 
 ---
@@ -41,7 +41,7 @@ layout: true
     &lt;/a&gt;
     &lt;a href="https://therbootcamp.github.io/"&gt;
       &lt;font color="#7E7E7E"&gt;
-      Einführung in die moderne Datenanalyse mit R | Oktober 2022
+      Introduction à l'analyse de données avec R | June 2023
       &lt;/font&gt;
     &lt;/a&gt;
     &lt;/span&gt;
@@ -60,15 +60,15 @@ layout: true
 &lt;ul&gt;
   &lt;li class="m1"&gt;&lt;span&gt;&lt;high&gt;R(Studio)&lt;/high&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Was ist R?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was sind Programmiersprachen?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was ist RStudio?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Warum RStudio?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, R?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, un Langage de Programmation?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, RStudio?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Pourquoi RStudio?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 ]
@@ -84,22 +84,22 @@ layout: true
 
 ---
 
-# Was ist R
+# C'est quoi, R
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1"&gt;&lt;span&gt;R(Studio)&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Was ist R?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was sind Programmiersprachen?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was ist RStudio?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Warum RStudio?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;C'est quoi, R?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, un Langage de Programmation?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, RStudio?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Pourquoi RStudio?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -107,34 +107,34 @@ layout: true
 
 .pull-right5[
 
-R is eine **open-source Programmiersprache** für **statistische Berechnungen und Graphiken** die von der **R Foundation for Statistical Computing** supported wird. R wird **stark von Statistkern und Datenanalysten** für die Entwicklung von statistischer Software und Datenanalyse verwendet. 
+R est un **langage de programmation open-source** pour **l'analyse statistisque et la création de graphiques** crée et maintenue par la **R Foundation for Statistical Computing**. R est fortement **influencé par les Statisticiens et les Data Scientists** et utilisé pour le développement de logiciels statistiques et d'analyse de données.
 
-Der code der R unterliegt ist hauptsächlich in **C, Fortran, and R** geschrieben. R ist unter der GNU General Public License frei verfügbar, und es existieren Installationen für alle üblichen Systeme. Währed R für sich nur ein **command line interface** besitzt, exisistieren verschiedene **graphische Nutzerinterfaces**.
+Le code R est principalement écrit dans les langages **C, Fortran, et R** lui même. R est mis à disposition de manière libre sous la licence GNU General Public Licence et il y a des installations pour tous les systèmes opératifs communs (Windows, Mac, Linux, autres). Même si R est à priori utilisé en **ligne de commande**, il existent quelques **interfaces graphiques**.
 
-R wurde 1993 von Ross Ihaka und Robert Gentlemen auf Basis der Programmiersprache S entwickelt.  
+La création de R remonte à 1993 par Ross Ihaka und Robert Gentlemen qui ont fait un travail de conversion / évolution du langage de programmation statistique qui existait déjà appellé S.  
 
-&lt;font style="font-size:12px"&gt;Adapted from &lt;a href="https://en.wikipedia.org/wiki/Statistical_model"&gt;Wikipedia&lt;/a&gt; (emphasis added)&lt;/font&gt;
+&lt;font style="font-size:12px"&gt;Adapté de &lt;a^ href="https://en.wikipedia.org/wiki/R_(programming_language)"&gt;Wikipedia&lt;/a&gt; (emphasis rajoutées)&lt;/font&gt;
 
 ]
 
 ---
 
-# Was ist eine Programmiersprache
+# C'est quoi, un Langage de Programmation
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1"&gt;&lt;span&gt;R(Studio)&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Was ist R?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Was sind Programmiersprachen?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was ist RStudio?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Warum RStudio?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, R?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;C'est quoi, un Langage de Programmation?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, RStudio?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Pourquoi RStudio?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -142,41 +142,41 @@ R wurde 1993 von Ross Ihaka und Robert Gentlemen auf Basis der Programmiersprach
 
 .pull-right5[
 
-Eine Programmiersprache ist eine **formale Sprache** die eine Reihe Instruktionen für verschiedenste Ziele spezifiziert. Programmiersprachen bestehen aus **instruktionen für einen Computer** und werden genutzt um **Algorithmen zu implementieren**.
+Un langage de programmation est un **langage formel** qui specifie une série d'instructions qui produit un résultat spécifique. Les langages programmation sont constitués d'**instructions pour ordinateur** et sont utilisés pour **implementer des algorithmes**
 
-&lt;u&gt;Algorithmus in Worten&lt;/u&gt;
-1. Lade Daten
-2. Extrahiere Variablen
-3. Führe Analyse durch
-4. Zeige Resultate
+&lt;u&gt;Algorithme en mots:&lt;/u&gt;
+1. Chargement des données
+2. Extraire des variables
+3. Effectuer une analyse
+4. Afficher les résultats
 
-&lt;u&gt;Algorithmus in R&lt;/u&gt;
+&lt;u&gt;Algorithme en R:&lt;/u&gt;
 &lt;mono&gt;data &lt;- read.table(link)&lt;br&gt;
-vars &lt;- data[,c('gruppe','werte')]&lt;br&gt;
-res &lt;- lm(werte ~ gruppe, data = vars)&lt;br&gt;
+vars &lt;- data[,c('group','value')]&lt;br&gt;
+res &lt;- lm(value ~ group, data = vars)&lt;br&gt;
 summary(res)&lt;br&gt;
 &lt;/mono&gt;
 ]
 
 ---
 
-# Was ist RStdudio
+# C'est quoi, RStudio
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1"&gt;&lt;span&gt;R(Studio)&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Was ist R?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was sind Programmiersprachen?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Was ist RStudio?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Warum RStudio?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, R?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, un Langage de Programmation?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;C'est quoi, RStudio?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Pourquoi RStudio?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m5g"&gt;&lt;span&gt;Analyse^&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 ]
@@ -191,22 +191,22 @@ summary(res)&lt;br&gt;
 
 ---
 
-# Warum RStudio?
+# Pourquoi RStudio?
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1"&gt;&lt;span&gt;R(Studio)&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Was ist R?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was sind Programmiersprachen?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was ist RStudio?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Warum RStudio?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, R?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, un Langage de Programmation?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, RStudio?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Pourquoi RStudio?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -217,30 +217,30 @@ summary(res)&lt;br&gt;
 &lt;p align = "left"&gt;
   &lt;img src="image/editor_edit.png"&gt;
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
-Shortcut für &lt;high&gt;schicke Code zur Console&lt;/high&gt;:&lt;br&gt;&lt;br2&gt;&lt;font size = 6&gt;&amp;#8984;/ctrl + &amp;#9166;&lt;/font&gt;&lt;br&gt;&lt;br2&gt;&lt;br2&gt;
-Shortcut für &lt;high&gt;führe Chunk wiederholt aus&lt;/high&gt;:&lt;br&gt;&lt;br2&gt;&lt;font size = 6&gt;  &amp;#8984;/ctrl + &amp;#9095; + p&lt;/font&gt;
+Racourci pour &lt;high&gt;envoyer du Code sur la Console&lt;/high&gt;:&lt;br&gt;&lt;br2&gt;&lt;font size = 6&gt;&amp;#8984;/ctrl + &amp;#9166;&lt;/font&gt;&lt;br&gt;&lt;br2&gt;&lt;br2&gt;
+Racourci pour &lt;high&gt;executer un chunk entier&lt;/high&gt;:&lt;br&gt;&lt;br2&gt;&lt;font size = 6&gt;  &amp;#8984;/ctrl + &amp;#9095;/shift + p&lt;/font&gt;
 &lt;/p&gt;
 
 ]
 
 ---
 
-# Warum RStudio?
+# Pourquoi RStudio?
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1"&gt;&lt;span&gt;R(Studio)&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Was ist R?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was sind Programmiersprachen?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was ist RStudio?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Warum RStudio?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, R?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, un Langage de Programmation?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, RStudio?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Pourquoi RStudio?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -257,22 +257,22 @@ Shortcut für &lt;high&gt;führe Chunk wiederholt aus&lt;/high&gt;:&lt;br&gt;&lt
 
 ---
 
-# Warum RStudio?
+# Pourquoi RStudio?
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1"&gt;&lt;span&gt;R(Studio)&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Was ist R?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was sind Programmiersprachen?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Was ist RStudio?&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Warum RStudio?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, R?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, un Langage de Programmation?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;C'est quoi, RStudio?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Pourquoi RStudio?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;br&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4g"&gt;&lt;span&gt;Données I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -280,8 +280,8 @@ Shortcut für &lt;high&gt;führe Chunk wiederholt aus&lt;/high&gt;:&lt;br&gt;&lt
 
 .pull-right5[
 
-&lt;b&gt;Projekte helfen bei...&lt;/b&gt;&lt;br&gt;
-workspace und history speichern &amp;#9679; projektspezifische Optionen setzen &amp;#9679; Dateien finden &amp;#9679; Versionskontrolle &amp;#9679; etc.
+&lt;b&gt;Les Projets aident à ...&lt;/b&gt;&lt;br&gt;
+Enregistrer l'espace de travail et l'historique &amp;#9679; definir des options et configurations spécifiques au projet &amp;#9679; Retrouver facilement les fichiers &amp;#9679; Gérér les versions &amp;#9679; etc.
 &lt;br&gt;&lt;br&gt;
 &lt;p align = "left"&gt;
   &lt;img src="image/folder_structure.png"&gt;

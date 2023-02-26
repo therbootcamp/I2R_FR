@@ -1,5 +1,4 @@
-# Applied ML @ Basel January 2019
+# Introduction à l'analyse de données avec R
 
-Notes (aka todo):
+Ce repositoire github contient les slides du cours de une demi journée de Juin 2023.
 
-Everything!

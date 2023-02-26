@@ -554,6 +554,6 @@ boxplot(daten$Besucher ~ daten$Region,
 
 class: middle, center
 
-<h1><high>Interactive</high></h1>
+<h1><high>Exercice</high></h1>
 
 

@@ -1,42 +1,41 @@
-### R Skript zu "Assignments"
-### Kurs "Einführung in die moderne Datenanalyse mit R"
-### Datum: August 2020
+### R script pour le bloc "Assignations"
+### Cours "Introduction à l'analyse de données avec R"
+### Datum: Juin 2023
 ### Autor: The R Bootcamp
 
+### <- créer un objet ----------------------------
 
-### <- kreiert Objekte ----------------------------
+# Lequel est l'objet, lequel est la fonction?
+one_two_three <- c(1, 2, 3) # l'objet est à gauche, la fonction est à droite
 
-# Was ist Funktion, was ist Objekt
-eins_zwei_drei <- c(1, 2, 3) # Object links, Funktion rechts, Objekt als Input zur Funktion
+# Est-ce que ça marche?
+c(4, 5, 6) -> four_five_six # Oui, la flèche fonctionne des deux cotés
 
-# Funktioniert das?
-c(4, 5, 6) -> vier_fünf_sechs # Ja, der Pfeil funktioniert in beide Seite
+# Est-ce que ça marche?
+seven_eight_nine = c(7, 8, 9) # Oui, = est identique à <- (flèche gauche)
 
-# Funktioniert das?
-sieben_acht_neun = c(7, 8, 9) # Ja, = ist identisch mit <- (Pfeil nach links)
+### <- changer un objet ----------------------------
 
-### <- verändert Objekte ----------------------------
+# Est-ce que l'objet change ici?
+one_two_three + 10 # Non
 
-# Ändert sich hier das Objekt?
-eins_zwei_drei + 10 # Nein
+# Est-ce que l'objet change ici?
+one_two_three_plus10 <- one_two_three + 10 # Non, un nouvel object est crée
 
-# Ändert sich hier das Objekt?
-eins_zwei_drei_plus10 <- eins_zwei_drei + 10 # Nein, ein neues wird kreiert 
+# Qu'est qui sort d'ici?
+what_is_this <- one_two_three + four_five_six # simplement la somme des chiffres dans les differentes positions
 
-# Was kommt hier raus
-was_ist_das <- eins_zwei_drei + vier_fünf_sechs # schlicht die jeweils die Summe der Einträge an den verschiedenen Positionen
+# Qu'est qui sort d'ici?
+what_is_this <- one_two_three + four_five_six * seven_eight_nine # le même principe: opération par élement
 
-# Was kommt hier raus
-was_ist_das <- eins_zwei_drei + vier_fünf_sechs * sieben_acht_neun # selbe Prinzip wie eben, element-wise operation
+# Qu'est qu'il y a derière l'objet?
+what_is_this # essayez-le
 
-# Was steckt hinter dem Objekt
-was_ist_das # probiert es aus
+### Object <- Fonction ----------------------------
 
-### Objekt <- Funktion ----------------------------
+# Où est l'objet? et où est la fonction?
+one_two_three + 10 # La fonction est le +, les objects, qui servent d'entrées sont à gauche et à droit du +
 
-# Wo ist das Objekt? Und wo die Funktion?
-eins_zwei_drei + 10 # Die Funktion ist das +, die Objekte, welche als Input dienen, sind links und rechts
-
-# Wo ist das Objekt? Und wo die Funktion?
-eins_zwei_drei # die Funktion print() wird im Hintergrund ausgeführt
+# Où est l'objet? et où est la fonction?
+one_two_three # la fonction print() s'exécute en arrière-plan
 

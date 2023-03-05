@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Data IO</title>
+    <title>Données</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Einführung in die moderne Datenanalyse mit R   The R Bootcamp                  " />
+    <meta name="author" content="Introduction à l’analyse de données avec R   The R Bootcamp                  " />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="baselrbootcamp.css" type="text/css" />
@@ -13,13 +13,13 @@
 class: center, middle, inverse, title-slide
 
 .title[
-# Data IO
+# Données
 ]
 .author[
-### Einführung in die moderne Datenanalyse mit R<br> <a href='https://therbootcamp.github.io'> The R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_2022Oct/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
+### Introduction à l’analyse de données avec R<br> <a href='https://therbootcamp.github.io'> The R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_2022Oct/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
 ]
 .date[
-### Oktober 2022
+### Juin 2023
 ]
 
 ---
@@ -58,14 +58,14 @@ layout: true
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;&lt;high&gt;Data I/O&lt;/high&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;&lt;high&gt;Données&lt;/high&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Daten von Festplatte lesen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;3 + 1 Datentypen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Charger des données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les  &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;3 + 1 types de données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -82,20 +82,20 @@ layout: true
 
 ---
 
-# Daten von Festplatte lesen
+# Charger des données
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Daten von Festplatte lesen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;3 + 1 Datentypen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Charger des données&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les  &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;3 + 1 types de données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -108,7 +108,7 @@ layout: true
 
 
 ```r
-# Lese Daten ein
+# Charger des données
 read.csv('1_Data/Tourismus.csv')
 ```
 
@@ -130,20 +130,20 @@ read.csv('1_Data/Tourismus.csv')
 
 ---
 
-# Daten von Festplatte lesen
+# Charger des données
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Daten von Festplatte lesen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;3 + 1 Datentypen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Charger des données&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les  &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;3 + 1 types de données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -156,11 +156,11 @@ read.csv('1_Data/Tourismus.csv')
 
 
 ```r
-# Lese Daten in ein Objekt ein
-daten &lt;- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data &lt;- read.csv('1_Data/Tourismus.csv')
 
-# Printe Daten
-daten
+# Voir les données
+data
 ```
 
 ```
@@ -182,20 +182,20 @@ daten
 
 ---
 
-# Daten von Festplatte lesen
+# Charger des données
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Daten von Festplatte lesen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;3 + 1 Datentypen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Charger des données&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;3 + 1 types de données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -211,20 +211,20 @@ daten
 
 ---
 
-# Daten von Festplatte lesen
+# Charger des données
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Daten von Festplatte lesen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;3 + 1 Datentypen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Charger des données&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;3 + 1 types de données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -241,20 +241,20 @@ daten
 
 ---
 
-# Daten von Festplatte lesen
+# Charger des données
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Daten von Festplatte lesen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;3 + 1 Datentypen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Charger des données&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;3 + 1 types de données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -270,20 +270,20 @@ daten
 
 ---
 
-# Daten leben in &lt;mono&gt;data.frames&lt;/mono&gt;
+# Les données "vivent" dans les  &lt;mono&gt;data.frames&lt;/mono&gt;
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Daten von Festplatte lesen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/high&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;3 + 1 Datentypen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Charger des données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Les données "vivent" dans les &lt;mono&gt;data.frames&lt;/span&gt;&lt;/high&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;3 + 1 types de données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -296,11 +296,11 @@ daten
 
 
 ```r
-# Lese Daten in ein Objekt ein
-daten &lt;- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data &lt;- read.csv('1_Data/Tourismus.csv')
 
-# Klasse der Daten
-class(daten)
+# Classe des données
+class(data)
 ```
 
 ```
@@ -308,7 +308,7 @@ class(daten)
 ```
 
 ```r
-dim(daten) # Dimensionen
+dim(data) # Dimensions
 ```
 
 ```
@@ -316,7 +316,7 @@ dim(daten) # Dimensionen
 ```
 
 ```r
-names(daten) # Variablennamen
+names(data) # Noms des variables
 ```
 
 ```
@@ -328,20 +328,20 @@ names(daten) # Variablennamen
 
 ---
 
-# 3 + 1 Datentypen
+# 3 + 1 types de données
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Daten von Festplatte lesen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;3 + 1 Datentypen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Charger des données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;3 + 1 types de données&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -358,20 +358,20 @@ names(daten) # Variablennamen
 
 ---
 
-# 3 + 1 Datentypen
+# 3 + 1 types de données
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Daten von Festplatte lesen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;3 + 1 Datentypen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Charger des données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;3 + 1 types de données&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -384,11 +384,11 @@ names(daten) # Variablennamen
 
 
 ```r
-# Lese Daten in ein Objekt ein
-daten &lt;- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data &lt;- read.csv('1_Data/Tourismus.csv')
 
-# Extrahiere Dauer mit $
-daten$Dauer
+# Extraire une variable avec $
+data$Dauer
 ```
 
 ```
@@ -409,20 +409,20 @@ daten$Dauer
 
 ---
 
-# 3 + 1 Datentypen
+# 3 + 1 types de données
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Daten von Festplatte lesen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;3 + 1 Datentypen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Charger des données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;3 + 1 types de données&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -435,11 +435,11 @@ daten$Dauer
 
 
 ```r
-# Lese Daten in ein Objekt ein
-daten &lt;- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data &lt;- read.csv('1_Data/Tourismus.csv')
 
-# Extrahiere Dauer mit $
-class(daten$Dauer)
+# Extraire une variable avec $
+class(data$Dauer)
 ```
 
 ```
@@ -450,20 +450,20 @@ class(daten$Dauer)
 
 ---
 
-# 3 + 1 Datentypen
+# 3 + 1 types de données
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Daten von Festplatte lesen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;3 + 1 Datentypen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Charger des données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;3 + 1 types de données&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -476,11 +476,11 @@ class(daten$Dauer)
 
 
 ```r
-# Lese Daten in ein Objekt ein
-daten &lt;- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data &lt;- read.csv('1_Data/Tourismus.csv')
 
-# Extrahiere Land mit $
-daten$Land
+# Extraire une variable avec $
+data$Land
 ```
 
 ```
@@ -500,20 +500,20 @@ daten$Land
 
 ---
 
-# 3 + 1 Datentypen
+# 3 + 1 types de données
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Daten von Festplatte lesen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;3 + 1 Datentypen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten auf die Festplatte schreiben&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Charger des données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;3 + 1 types de données&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Enrégistrer des données dans des fichiers&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -526,11 +526,11 @@ daten$Land
 
 
 ```r
-# Lese Daten in ein Objekt ein
-daten &lt;- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data &lt;- read.csv('1_Data/Tourismus.csv')
 
-# Klasse der Land Variable
-class(daten$Land)
+# Classe de la variable
+class(data$Land)
 ```
 
 ```
@@ -540,20 +540,20 @@ class(daten$Land)
 
 ---
 
-# Daten auf die Festplatte schreiben
+# Enrégistrer des données dans des fichiers
 
 .pull-left4[
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3g"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m4"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3g"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m4"&gt;&lt;span&gt;Données&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Daten von Festplatte lesen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Daten leben in &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;3 + 1 Datentypen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Daten auf die Festplatte schreiben&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Charger des données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les données "vivent" dans les &lt;mono&gt;data.frames&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;3 + 1 types de données&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Enrégistrer des données dans des fichiers&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -566,11 +566,11 @@ class(daten$Land)
 
 
 ```r
-# Schreibe Daten auf die Festplatte als csv
-write.csv(daten, '1_Data/Tourismus_neu.csv')
+# Enrégistrer des données dans un fichier au format csv
+write.csv(data, '1_Data/Tourismus_neu.csv')
 
-# Schreibe Daten auf die Festplatte als RDS
-saveRDS(daten, '1_Data/Tourismus_neu.RDS')
+# Enrégistrer des données dans un fichier au format RDS
+saveRDS(data, '1_Data/Tourismus_neu.RDS')
 ```
 ]
 
@@ -578,7 +578,7 @@ saveRDS(daten, '1_Data/Tourismus_neu.RDS')
 
 class: middle, center
 
-&lt;h1&gt;&lt;high&gt;Interactive&lt;/high&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;high&gt;Exercice&lt;/high&gt;&lt;/h1&gt;
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

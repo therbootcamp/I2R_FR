@@ -1,5 +1,5 @@
 ---
-title: "Données"
+title: "Data IO"
 author: "Introduction à l'analyse de données avec R<br>
   <a href='https://therbootcamp.github.io'>
     The R Bootcamp
@@ -75,12 +75,12 @@ require(tidyverse)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span><high>Données</high></a></span></li>
+  <li class="m4"><span><high>Data I/O</high></a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les  <mono>data.frames</span></li>
     <li><span>3 + 1 types de données</span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -105,12 +105,12 @@ require(tidyverse)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span><high>Charger des données</high></span></li>
     <li><span>Les données "vivent" dans les  <mono>data.frames</span></li>
     <li><span>3 + 1 types de données</span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -139,12 +139,12 @@ read.csv('1_Data/Tourismus.csv')
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span><high>Charger des données</high></span></li>
     <li><span>Les données "vivent" dans les  <mono>data.frames</span></li>
     <li><span>3 + 1 types de données</span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -158,7 +158,7 @@ options(max.print=50)
 ```
 
 ```{r}
-# Charger des données dans un objet
+# Charger des données dans un object
 data <- read.csv('1_Data/Tourismus.csv')
 
 # Voir les données
@@ -178,12 +178,12 @@ data
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span><high>Charger des données</high></span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
     <li><span>3 + 1 types de données</span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -207,12 +207,12 @@ data
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span><high>Charger des données</high></span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
     <li><span>3 + 1 types de données</span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -237,12 +237,12 @@ data
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span><high>Charger des données</high></span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
     <li><span>3 + 1 types de données</span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -266,12 +266,12 @@ data
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span><high>Les données "vivent" dans les <mono>data.frames</span></high></li>
     <li><span>3 + 1 types de données</span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -309,12 +309,12 @@ names(data) # Noms des variables
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
     <li><span><high>3 + 1 types de données</high></span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -339,12 +339,12 @@ names(data) # Noms des variables
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
     <li><span><high>3 + 1 types de données</high></span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -377,12 +377,12 @@ data$Dauer
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
     <li><span><high>3 + 1 types de données</high></span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -416,12 +416,12 @@ class(data$Dauer)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
     <li><span><high>3 + 1 types de données</high></span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -454,12 +454,12 @@ data$Land
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
     <li><span><high>3 + 1 types de données</high></span></li>
-    <li><span>Enrégistrer des données dans des fichiers</span></li>
+    <li><span>Ecrire des données dans des fichiers</span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -484,7 +484,7 @@ class(data$Land)
 
 ---
 
-# Enrégistrer des données dans des fichiers
+# Ecrire des données dans des fichiers
 
 .pull-left4[
 
@@ -492,12 +492,12 @@ class(data$Land)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Data I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
     <li><span>3 + 1 types de données</span></li>
-    <li><span><high>Enrégistrer des données dans des fichiers</high></span></li>
+    <li><span><high>Ecrire des données dans des fichiers</high></span></li>
   </ul><br>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
@@ -511,10 +511,10 @@ options(max.print=80,width=40)
 ```
 
 ```{r}
-# Enrégistrer des données dans un fichier au format csv
+# Écrire des données dans un fichier au format csv
 write.csv(data, '1_Data/Tourismus_neu.csv')
 
-# Enrégistrer des données dans un fichier au format RDS
+# Ecrire des données dans un fichier au format RDS
 saveRDS(data, '1_Data/Tourismus_neu.RDS')
 
 ```

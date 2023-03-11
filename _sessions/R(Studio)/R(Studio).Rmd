@@ -303,5 +303,5 @@ Enregistrer l'espace de travail et l'historique &#9679; definir des options et c
 
 class: middle, center
 
-<h1><high>Exercice</high></h1>
+<h1><high>Exercices</high></h1>
 

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Funktionen</title>
+    <title>Fonctions</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Einführung in die moderne Datenanalyse mit R   The R Bootcamp                  " />
+    <meta name="author" content="Introduction à l’analyse de données avec R   The R Bootcamp                  " />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="baselrbootcamp.css" type="text/css" />
@@ -13,13 +13,13 @@
 class: center, middle, inverse, title-slide
 
 .title[
-# Funktionen
+# Fonctions
 ]
 .author[
-### Einführung in die moderne Datenanalyse mit R<br> <a href='https://therbootcamp.github.io'> The R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_2022Oct/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
+### Introduction à l’analyse de données avec R<br> <a href='https://therbootcamp.github.io'> The R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_2022Oct/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
 ]
 .date[
-### Oktober 2022
+### Juin 2023
 ]
 
 ---
@@ -60,14 +60,14 @@ layout: true
 
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3"&gt;&lt;span&gt;&lt;high&gt;Funktionen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3"&gt;&lt;span&gt;&lt;high&gt;Fonctions&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Alles geschieht durch eine Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen haben (Default) Argumente&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Die Klasse der Argumente ist wichtig&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen "leben" in Paketen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Erhalte Hilfe mit &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Tout passe par les fonctions&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions ont des arguments (par défaut)&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;La classe des arguments est importante&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions "vivent" dans les "Packages"&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Checher de l'aide avec &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
@@ -85,19 +85,19 @@ layout: true
 
 ---
 
-# Funktionen 
+# Fonctions
 
 .pull-left4[
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Alles geschieht durch eine Funktion&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen haben (Default) Argumente&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Die Klasse der Argumente ist wichtig&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen "leben" in Paketen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Erhalte Hilfe mit &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Tout passe par les fonctions&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions ont des arguments (par défaut)&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;La classe des arguments est importante&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions "vivent" dans les "Packages"&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Checher de l'aide avec &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
@@ -110,19 +110,19 @@ layout: true
 
 ---
 
-# Funktionen 
+# Fonctions
 
 .pull-left4[
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Alles geschieht durch eine Funktion&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen haben (Default) Argumente&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Die Klasse der Argumente ist wichtig&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen "leben" in Paketen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Erhalte Hilfe mit &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Tout passe par les fonctions&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions ont des arguments (par défaut)&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;La classe des arguments est importante&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions "vivent" dans les "Packages"&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Checher de l'aide avec &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
@@ -132,11 +132,11 @@ layout: true
 .pull-right5[
 
 ```r
-# Funktion c()
-eins_zwei_drei &lt;- c(1, 2, 3)
+# Fonction c()
+one_two_three &lt;- c(1, 2, 3)
 
-# Funktion `+`()
-eins_zwei_drei + 100
+# Fonction `+`()
+one_two_three + 100
 ```
 
 ```
@@ -144,8 +144,8 @@ eins_zwei_drei + 100
 ```
 
 ```r
-# Funktion print()
-eins_zwei_drei
+# Fonction print()
+one_two_three
 ```
 
 ```
@@ -153,8 +153,8 @@ eins_zwei_drei
 ```
 
 ```r
-# Funktion mean()
-mean(eins_zwei_drei)
+# Fonction mean()
+mean(one_two_three)
 ```
 
 ```
@@ -165,19 +165,19 @@ mean(eins_zwei_drei)
 
 ---
 
-# Argumente 
+# Arguments
 
 .pull-left4[
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Alles geschieht durch eine Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Funktionen haben (Default) Argumente&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Die Klasse der Argumente ist wichtig&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen "leben" in Paketen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Erhalte Hilfe mit &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Tout passe par les fonctions&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Les fonctions ont des arguments (par défaut)&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;La classe des arguments est importante&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions "vivent" dans les "Packages"&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Checher de l'aide avec &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
@@ -187,7 +187,7 @@ mean(eins_zwei_drei)
 .pull-right5[
 
 ```r
-# Kein Argument
+# Aucun Argument
 mean()
 ```
 
@@ -196,7 +196,7 @@ mean()
 ```
 
 ```r
-# Ein (notwendiges) Argument
+# Un argument (nécessaire)
 mean(c(1, 2, 3))
 ```
 
@@ -205,7 +205,7 @@ mean(c(1, 2, 3))
 ```
 
 ```r
-# Hinzufügen eines fehlenden Werts (NA)
+# Ajouter une valeur manquante (NA dans ce cas)
 mean(c(1, 2, 3, NA))
 ```
 
@@ -217,19 +217,19 @@ mean(c(1, 2, 3, NA))
 
 ---
 
-# Argumente 
+# Arguments 
 
 .pull-left4[
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Alles geschieht durch eine Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Funktionen haben (Default) Argumente&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Die Klasse der Argumente ist wichtig&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen "leben" in Paketen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Erhalte Hilfe mit &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Tout passe par les fonctions&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Les fonctions ont des arguments (par défaut)&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;La classe des arguments est importante&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions "vivent" dans les "Packages"&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Checher de l'aide avec &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
@@ -239,7 +239,7 @@ mean(c(1, 2, 3, NA))
 .pull-right5[
 
 ```r
-# Kein Argument
+# Aucun argument
 mean()
 ```
 
@@ -248,7 +248,7 @@ mean()
 ```
 
 ```r
-# Ein (notwendiges) Argument
+# Un argument (nécessaire)
 mean(c(1, 2, 3))
 ```
 
@@ -257,7 +257,7 @@ mean(c(1, 2, 3))
 ```
 
 ```r
-# Ändere den Default zur Entfernung des NAs
+# Modifier le comportement par défaut des NAs
 mean(c(1, 2, 3, NA), na.rm = TRUE)
 ```
 
@@ -268,19 +268,19 @@ mean(c(1, 2, 3, NA), na.rm = TRUE)
 
 ---
 
-# Klassen 
+# Classes
 
 .pull-left4[
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Alles geschieht durch eine Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen haben (Default) Argumente&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Die Klasse der Argumente ist wichtig&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen "leben" in Paketen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Erhalte Hilfe mit &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Tout passe par les fonctions&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions ont des arguments (par défaut)&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;La classe des arguments est importante&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions "vivent" dans les "Packages"&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Checher de l'aide avec &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
@@ -300,19 +300,19 @@ mean(c(1, 2, 3, NA), na.rm = TRUE)
 
 ---
 
-# Klassen 
+# Classes
 
 .pull-left4[
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m2g"&gt;&lt;span&gt;Assignations&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Alles geschieht durch eine Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen haben (Default) Argumente&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Die Klasse der Argumente ist wichtig&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen "leben" in Paketen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Erhalte Hilfe mit &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Tout passe par les fonctions&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions ont des arguments (par défaut)&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;La classe des arguments est importante&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions "vivent" dans les "Packages"&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Checher de l'aide avec &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
@@ -322,7 +322,7 @@ mean(c(1, 2, 3, NA), na.rm = TRUE)
 .pull-right5[
 
 ```r
-# Berechne Mittelwert von c(1, 2, 3)
+# Calculer la moyenne de c(1, 2, 3)
 mean(c(1, 2, 3))
 ```
 
@@ -331,7 +331,7 @@ mean(c(1, 2, 3))
 ```
 
 ```r
-# Berechne Mittelwert von c("1", "2", "3")
+# Calculer la moyenne de c('1', '2', '3')
 mean(c("1", "2", "3"))
 ```
 
@@ -347,19 +347,19 @@ mean(c("1", "2", "3"))
 
 ---
 
-# Pakete 
+# Packages
 
 .pull-left4[
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Alles geschieht durch eine Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen haben (Default) Argumente&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Die Klasse der Argumente ist wichtig&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Funktionen "leben" in Paketen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Erhalte Hilfe mit &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Tout passe par les fonctions&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions ont des arguments (par défaut)&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;La classe des arguments est importante&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Les fonctions "vivent" dans les "Packages"&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Checher de l'aide avec &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
@@ -372,19 +372,19 @@ mean(c("1", "2", "3"))
 
 ---
 
-# Funktionen 
+# Fonctions 
 
 .pull-left4[
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Alles geschieht durch eine Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen haben (Default) Argumente&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Die Klasse der Argumente ist wichtig&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Funktionen "leben" in Paketen&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Erhalte Hilfe mit &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Tout passe par les fonctions&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions ont des arguments (par défaut)&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;La classe des arguments est importante&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Les fonctions "vivent" dans les "Packages"&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Checher de l'aide avec &lt;mono&gt;?&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
@@ -393,14 +393,14 @@ mean(c("1", "2", "3"))
 
 .pull-right5[
 
-&lt;high&gt;Installiere&lt;/high&gt; Pakete &lt;high&gt;einmal&lt;/high&gt; mit `install.packages()`
+&lt;high&gt;Installer les &lt;/high&gt;Packages &lt;high&gt;une fois&lt;/high&gt; avec `install.packages()`
 
 
 ```r
 install.packages("tidyverse")
 ```
 &lt;br2&gt;
-&lt;high&gt;Lade&lt;/high&gt; existierende Pakete &lt;high&gt;jedes mal&lt;/high&gt; mit `library()`
+&lt;high&gt;Charger&lt;/high&gt; les packages installés &lt;high&gt;à chaque fois &lt;/high&gt; avec `library()`
 
 
 ```r
@@ -411,19 +411,19 @@ library(tidyverse)
 ]
 ---
 
-# Funktionen 
+# Fonctions 
 
 .pull-left4[
 &lt;ul&gt;
   &lt;li class="m1g"&gt;&lt;span&gt;R(Studio)&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m2g"&gt;&lt;span&gt;Assignments&lt;br&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li class="m3"&gt;&lt;span&gt;Funktionen&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="m3"&gt;&lt;span&gt;Fonctions&lt;/span&gt;&lt;/li&gt;
   &lt;ul class="level"&gt;
-    &lt;li&gt;&lt;span&gt;Alles geschieht durch eine Funktion&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen haben (Default) Argumente&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Die Klasse der Argumente ist wichtig&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Funktionen "leben" in Paketen&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;high&gt;Erhalte Hilfe mit &lt;mono&gt;?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Tout passe par les fonctions&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions ont des arguments (par défaut)&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;La classe des arguments est importante&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Les fonctions "vivent" dans les "Packages"&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;high&gt;Checher de l'aide avec &lt;mono&gt;?&lt;/high&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;&lt;br&gt;
   &lt;li class="m4g"&gt;&lt;span&gt;Data I/O&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class="m5g"&gt;&lt;span&gt;Analyse&lt;/span&gt;&lt;/li&gt;
@@ -442,7 +442,7 @@ library(tidyverse)
 
 class: middle, center
 
-&lt;h1&gt;&lt;high&gt;Interactive&lt;/high&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;high&gt;Exercice&lt;/high&gt;&lt;/h1&gt;
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

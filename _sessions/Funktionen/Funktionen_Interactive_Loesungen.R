@@ -1,79 +1,80 @@
-### R Skript zu "Funktionen"
-### Kurs "Einführung in die moderne Datenanalyse mit R"
-### Datum: Februar 2020
-### Autor: The R Bootcamp
+### R Script pour le bloc "Fonctions"
+### Cours "Introduction à l'analyse de données avec R"
+### Datum: Juin 2023
+### Auteur: The R Bootcamp
 
 
-### Jede Aktion wird durch eine Funktion ausgeführt ----------------------------
+### Chaque action est réalisée par une fonction ----------------------------
 
-# Generiere einen Vektor, der die Elemente 1,2 und 3 enthält und nenne ihn my_vec.
+# Générer un vecteur contenant les éléments 1,2 et 3 et le nommer my_vec.
 my_vec <- c(1, 2, 3)
 my_vec <- 1:3
 
-# Wie viele (sichtbaren) Funktionen wurden hierbei aufgerufen?
-#> 2; im ersten Fall `<-` und c(), und im zweiten Fall `<-` und `:`
+# Combien de fonctions (visibles) ont été appelées?
+#> 2; dans le premier cas `<-` et c(), et dans le second cas `<-` et `:`
 
-# Zeige den Vektor my_vec in der Konsole an.
+# Affichez le vecteur my_vec dans la console.
 my_vec
 
+### Les fonctions ont des fichiers d'aide ------------------------------------------------
 
-### Funktionen haben help files ------------------------------------------------
-
-# Um zu lernen wie eine Funktion funktioniert, können wir das help file aufrufen.
-# Schaue dir das help file der "sum()" Funktion an.
+# Pour savoir comment fonctionne une fonction, nous pouvons appeler le fichier d'aide.
+# Regardez le fichier d'aide de la fonction « sum() ».
 ?sum
 help(sum)
 
-# Welches sind die wichtigsten Abschnitte eines help files (Achtung subjektiv und 
-# vom jeweiligen help file abhängig).
-#> Description: Gibt einen kurzen Überblick über das Ziel der Funktion.
-#> Usage: Zeigt die Funktion mit allen Argumenten und, falls vorhanden, den
-#>        dazugehörigen Defaults.
-#> Arguments: Gibt eine genauere Beschreibung der Argumente.
-#> Details: Detailiertere Informationen über die Funktion und die Methoden, die 
-#>          angewendet werden. Hier gibt es sehr grosse Unterschiede im Detailgrad.
-#>          Es kommt ganz auf den Autor der Funktion an, wie genau alles
-#>          beschrieben wird.
-#> Value: Beschreibung des Outputs einer Funktion.
-#> Examples: Beispiele über die Verwendung der Funktion. Kann zum Teil etwas
-#>           kryptisch sein.
+#> Quelles sont les sections les plus importantes d'un fichier d'aide?
+#> Description: Donne un bref aperçu de l'objectif de la fonction.
+#> Usage : Affiche la fonction avec tous les arguments et, le cas échéant, 
+#>          les valeurs par défaut correspondantes.
+#> Arguments : Donne une description plus détaillée des arguments.
+#> Détails: Informations plus détaillées sur la fonction et 
+#>          les méthodes appliquées. Il y a de très grandes différences 
+#>          dans le niveau de détail. #> Cela dépend entièrement de l'auteur 
+#>          de la fonction, comment exactement tout est décrit.
+#> Valeur : Description de la sortie d'une fonction.
+#> Exemples: Exemples d'utilisation de la fonction. 
+#>            Peut prendre différentes formes qui soit parfois cryptiques.
 
 
-### Funktionen haben (normalerweise) Argumente ---------------------------------
+### Les fonctions on (normalement) des arguments ---------------------------------
 
-# Die "sum()" Funktion berechnet den Mittelwert eines Objekts. Benutze sie um
-# die Summe aller Elemente in my_vec zu berechnen.
+# La fonction « sum() » calcule la valeur moyenne d'un objet. 
+# Calculez la somme de tous les éléments de l'objet my_vec 
+# en utilisant la fonction sum
 sum(my_vec)
 
-# Füge mit Hilfe des folgenden Codes ein NA am Ende des Vektors my_vec hinzu.
+# Ajoutez un NA à la fin du my_vec vectoriel à l'aide du code suivant:
 my_vec <- c(my_vec, NA)
 
-# Berechne nun nochmals die Summe von my_vec. Was ist das Ergebnis und warum?
+# Maintenant, calculez à nouveau la somme des my_vec. 
+# Quel est le résultat et pourquoi?
 sum(my_vec)
-#> NA, da na.rm = FALSE der Default ist, werden die NAs nicht ausgeschlossen.
+#> NA, na.rm = FALSE est la valeur par défaut, les NAs ne sont pas exclus
 
-# Wiederhole die Berechnung der letzten Aufgabe, so dass das Resultat 6 ergibt.
+# Répétez le calcul de la dernière tâche pour que le résultat soit 6.
 sum(my_vec, na.rm = TRUE)
 
-### Die Klasse des Inputs muss mit der vorgegebenen Klasse übereinstimmen ------
+### La classe des arguments doit correspondre à la classe donnée ------
 
-# Teste die Klasse von my_vec.
+# Testez la classe de my_vec.
 class(my_vec)
-#> my_vec ist ein numerischer Vektor, d.h. mit ihm können z.B. Berechnungen angestellt
-#> werden.
+#> my_vec est un vecteur numérique, 
+#c'est-à-dire qu'il peut être utilisé pour effectuer des calculs
 
-# Ersetze mit Hilfe des folgenden Codes das NA in my_vec durch ein "a".
+# En utilisant le code suivant, remplacez le NA dans my_vec par un « a ».
 my_vec[4] <- "a"
 
-# Teste die Klasse von my_vec. Weshalb hat sich die Klasse geändert?
+# Testez la classe de my_vec. Pourquoi la classe a-t-elle changé?
 class(my_vec)
-#> my_vec hat neu die Klasse character, d.h. die numerischen Elemente wurden auch zu
-#> characters umgewandelt. Dies entspricht der Hierarchie der Type coersion in R:
-#> Folgende Klassen werden falls nötig in die nächst höhere Klasse umgewandelt
+#> my_vec a pris la nouvelle classe character. Les éléments numériques
+#> sont aussi devenu des caractères. Ceci correspond à hiérarchie de 
+#> des types des données en R pour les conversions.
+#> Les classes sont converties en classe supérieure suivante si nécessaire
 #> logical -> numeric (integer -> double) -> character
 
-# Berechne nochmals die Summe von my_vec. Was passiert und weshalb?
+# Calculez à nouveau la somme des my_vec. Que se passe-t-il et pourquoi?
 sum(my_vec, na.rm = TRUE)
-#> Wir erhalten eine Fehlermeldung, da die Klasse des Inputs nicht mit der Klasse
-#> des Outputs übereinstimmt.
+#> Nous obtenons un message d'erreur car la classe de l'entrée 
+#> ne correspond pas à la classe de la sortie.
 

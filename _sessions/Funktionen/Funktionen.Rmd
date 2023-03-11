@@ -1,6 +1,6 @@
 ---
-title: "Funktionen"
-author: "Einführung in die moderne Datenanalyse mit R<br>
+title: "Fonctions"
+author: "Introduction à l'analyse de données avec R<br>
   <a href='https://therbootcamp.github.io'>
     The R Bootcamp
   </a>
@@ -17,7 +17,7 @@ author: "Einführung in die moderne Datenanalyse mit R<br>
   <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
     <i class='fab fa-linkedin' style='font-size: .9em;'></i>
   </a>"
-date: "Oktober 2022"
+date: "Juin 2023"
 output:
   xaringan::moon_reader:
     css: ["default", "baselrbootcamp.css"]
@@ -78,14 +78,14 @@ require(tidyverse)
 
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2g"><span>Assignments<br></span></li>
-  <li class="m3"><span><high>Funktionen</high></span></li>
+  <li class="m2g"><span>Assignations<br></span></li>
+  <li class="m3"><span><high>Fonctions</high></span></li>
   <ul class="level">
-    <li><span>Alles geschieht durch eine Funktion</span></li>
-    <li><span>Funktionen haben (Default) Argumente</span></li>
-    <li><span>Die Klasse der Argumente ist wichtig</span></li>
-    <li><span>Funktionen "leben" in Paketen</span></li>
-    <li><span>Erhalte Hilfe mit <mono>?</span></li>
+    <li><span>Tout passe par les fonctions</span></li>
+    <li><span>Les fonctions ont des arguments (par défaut)</span></li>
+    <li><span>La classe des arguments est importante</span></li>
+    <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
+    <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
   <li class="m4g"><span>Data I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
@@ -103,19 +103,19 @@ require(tidyverse)
 
 ---
 
-# Funktionen 
+# Fonctions
 
 .pull-left4[
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2g"><span>Assignments<br></span></li>
-  <li class="m3"><span>Funktionen</span></li>
+  <li class="m2g"><span>Assignations<br></span></li>
+  <li class="m3"><span>Fonctions</span></li>
   <ul class="level">
-    <li><span><high>Alles geschieht durch eine Funktion</high></span></li>
-    <li><span>Funktionen haben (Default) Argumente</span></li>
-    <li><span>Die Klasse der Argumente ist wichtig</span></li>
-    <li><span>Funktionen "leben" in Paketen</span></li>
-    <li><span>Erhalte Hilfe mit <mono>?</span></li>
+    <li><span><high>Tout passe par les fonctions</high></span></li>
+    <li><span>Les fonctions ont des arguments (par défaut)</span></li>
+    <li><span>La classe des arguments est importante</span></li>
+    <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
+    <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
   <li class="m4g"><span>Data I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
@@ -128,19 +128,19 @@ require(tidyverse)
 
 ---
 
-# Funktionen 
+# Fonctions
 
 .pull-left4[
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2g"><span>Assignments<br></span></li>
-  <li class="m3"><span>Funktionen</span></li>
+  <li class="m2g"><span>Assignations<br></span></li>
+  <li class="m3"><span>Fonctions</span></li>
   <ul class="level">
-    <li><span><high>Alles geschieht durch eine Funktion</high></span></li>
-    <li><span>Funktionen haben (Default) Argumente</span></li>
-    <li><span>Die Klasse der Argumente ist wichtig</span></li>
-    <li><span>Funktionen "leben" in Paketen</span></li>
-    <li><span>Erhalte Hilfe mit <mono>?</span></li>
+    <li><span><high>Tout passe par les fonctions</high></span></li>
+    <li><span>Les fonctions ont des arguments (par défaut)</span></li>
+    <li><span>La classe des arguments est importante</span></li>
+    <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
+    <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
   <li class="m4g"><span>Data I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
@@ -149,17 +149,17 @@ require(tidyverse)
 
 .pull-right5[
 ```{r}
-# Funktion c()
-eins_zwei_drei <- c(1, 2, 3)
+# Fonction c()
+one_two_three <- c(1, 2, 3)
 
-# Funktion `+`()
-eins_zwei_drei + 100
+# Fonction `+`()
+one_two_three + 100
 
-# Funktion print()
-eins_zwei_drei
+# Fonction print()
+one_two_three
 
-# Funktion mean()
-mean(eins_zwei_drei)
+# Fonction mean()
+mean(one_two_three)
 
 ```
 ]
@@ -167,19 +167,19 @@ mean(eins_zwei_drei)
 
 ---
 
-# Argumente 
+# Arguments
 
 .pull-left4[
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2g"><span>Assignments<br></span></li>
-  <li class="m3"><span>Funktionen</span></li>
+  <li class="m2g"><span>Assignations<br></span></li>
+  <li class="m3"><span>Fonctions</span></li>
   <ul class="level">
-    <li><span>Alles geschieht durch eine Funktion</span></li>
-    <li><span><high>Funktionen haben (Default) Argumente</high></span></li>
-    <li><span>Die Klasse der Argumente ist wichtig</span></li>
-    <li><span>Funktionen "leben" in Paketen</span></li>
-    <li><span>Erhalte Hilfe mit <mono>?</span></li>
+    <li><span>Tout passe par les fonctions</span></li>
+    <li><span><high>Les fonctions ont des arguments (par défaut)</high></span></li>
+    <li><span>La classe des arguments est importante</span></li>
+    <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
+    <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
   <li class="m4g"><span>Data I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
@@ -188,13 +188,13 @@ mean(eins_zwei_drei)
 
 .pull-right5[
 ```{r, error=TRUE,tidy=T}
-# Kein Argument
+# Aucun Argument
 mean()
 
-# Ein (notwendiges) Argument
+# Un argument (nécessaire)
 mean(c(1, 2, 3))
 
-# Hinzufügen eines fehlenden Werts (NA)
+# Ajouter une valeur manquante (NA dans ce cas)
 mean(c(1, 2, 3, NA))
 ```
 ]
@@ -202,19 +202,19 @@ mean(c(1, 2, 3, NA))
 
 ---
 
-# Argumente 
+# Arguments 
 
 .pull-left4[
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2g"><span>Assignments<br></span></li>
-  <li class="m3"><span>Funktionen</span></li>
+  <li class="m2g"><span>Assignations<br></span></li>
+  <li class="m3"><span>Fonctions</span></li>
   <ul class="level">
-    <li><span>Alles geschieht durch eine Funktion</span></li>
-    <li><span><high>Funktionen haben (Default) Argumente</high></span></li>
-    <li><span>Die Klasse der Argumente ist wichtig</span></li>
-    <li><span>Funktionen "leben" in Paketen</span></li>
-    <li><span>Erhalte Hilfe mit <mono>?</span></li>
+    <li><span>Tout passe par les fonctions</span></li>
+    <li><span><high>Les fonctions ont des arguments (par défaut)</high></span></li>
+    <li><span>La classe des arguments est importante</span></li>
+    <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
+    <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
   <li class="m4g"><span>Data I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
@@ -223,13 +223,13 @@ mean(c(1, 2, 3, NA))
 
 .pull-right5[
 ```{r, error=TRUE,tidy=T}
-# Kein Argument
+# Aucun argument
 mean()
 
-# Ein (notwendiges) Argument
+# Un argument (nécessaire)
 mean(c(1, 2, 3))
 
-# Ändere den Default zur Entfernung des NAs
+# Modifier le comportement par défaut des NAs
 mean(c(1, 2, 3, NA), na.rm = TRUE)
 
 ```
@@ -237,19 +237,19 @@ mean(c(1, 2, 3, NA), na.rm = TRUE)
 
 ---
 
-# Klassen 
+# Classes
 
 .pull-left4[
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2g"><span>Assignments<br></span></li>
-  <li class="m3"><span>Funktionen</span></li>
+  <li class="m2g"><span>Assignations<br></span></li>
+  <li class="m3"><span>Fonctions</span></li>
   <ul class="level">
-    <li><span>Alles geschieht durch eine Funktion</span></li>
-    <li><span>Funktionen haben (Default) Argumente</span></li>
-    <li><span><high>Die Klasse der Argumente ist wichtig</high></span></li>
-    <li><span>Funktionen "leben" in Paketen</span></li>
-    <li><span>Erhalte Hilfe mit <mono>?</span></li>
+    <li><span>Tout passe par les fonctions</span></li>
+    <li><span>Les fonctions ont des arguments (par défaut)</span></li>
+    <li><span><high>La classe des arguments est importante</high></span></li>
+    <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
+    <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
   <li class="m4g"><span>Data I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
@@ -269,19 +269,19 @@ mean(c(1, 2, 3, NA), na.rm = TRUE)
 
 ---
 
-# Klassen 
+# Classes
 
 .pull-left4[
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
-  <li class="m2g"><span>Assignments<br></span></li>
-  <li class="m3"><span>Funktionen</span></li>
+  <li class="m2g"><span>Assignations<br></span></li>
+  <li class="m3"><span>Fonctions</span></li>
   <ul class="level">
-    <li><span>Alles geschieht durch eine Funktion</span></li>
-    <li><span>Funktionen haben (Default) Argumente</span></li>
-    <li><span><high>Die Klasse der Argumente ist wichtig</high></span></li>
-    <li><span>Funktionen "leben" in Paketen</span></li>
-    <li><span>Erhalte Hilfe mit <mono>?</span></li>
+    <li><span>Tout passe par les fonctions</span></li>
+    <li><span>Les fonctions ont des arguments (par défaut)</span></li>
+    <li><span><high>La classe des arguments est importante</high></span></li>
+    <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
+    <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
   <li class="m4g"><span>Data I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
@@ -291,10 +291,10 @@ mean(c(1, 2, 3, NA), na.rm = TRUE)
 .pull-right5[
 ```{r, error=TRUE,tidy=T}
 
-# Berechne Mittelwert von c(1, 2, 3)
+# Calculer la moyenne de c(1, 2, 3)
 mean(c(1, 2, 3))
 
-# Berechne Mittelwert von c("1", "2", "3")
+# Calculer la moyenne de c("1", "2", "3")
 mean(c("1", "2", "3"))
 ```
 ]
@@ -302,19 +302,19 @@ mean(c("1", "2", "3"))
 
 ---
 
-# Pakete 
+# Packages
 
 .pull-left4[
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignments<br></span></li>
-  <li class="m3"><span>Funktionen</span></li>
+  <li class="m3"><span>Fonctions</span></li>
   <ul class="level">
-    <li><span>Alles geschieht durch eine Funktion</span></li>
-    <li><span>Funktionen haben (Default) Argumente</span></li>
-    <li><span>Die Klasse der Argumente ist wichtig</span></li>
-    <li><span><high>Funktionen "leben" in Paketen</high></span></li>
-    <li><span>Erhalte Hilfe mit <mono>?</span></li>
+    <li><span>Tout passe par les fonctions</span></li>
+    <li><span>Les fonctions ont des arguments (par défaut)</span></li>
+    <li><span>La classe des arguments est importante</span></li>
+    <li><span><high>Les fonctions "vivent" dans les "Packages"</high></span></li>
+    <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
   <li class="m4g"><span>Data I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
@@ -327,19 +327,19 @@ mean(c("1", "2", "3"))
 
 ---
 
-# Funktionen 
+# Fonctions 
 
 .pull-left4[
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignments<br></span></li>
-  <li class="m3"><span>Funktionen</span></li>
+  <li class="m3"><span>Fonctions</span></li>
   <ul class="level">
-    <li><span>Alles geschieht durch eine Funktion</span></li>
-    <li><span>Funktionen haben (Default) Argumente</span></li>
-    <li><span>Die Klasse der Argumente ist wichtig</span></li>
-    <li><span><high>Funktionen "leben" in Paketen</high></span></li>
-    <li><span>Erhalte Hilfe mit <mono>?</span></li>
+    <li><span>Tout passe par les fonctions</span></li>
+    <li><span>Les fonctions ont des arguments (par défaut)</span></li>
+    <li><span>La classe des arguments est importante</span></li>
+    <li><span><high>Les fonctions "vivent" dans les "Packages"</high></span></li>
+    <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
   <li class="m4g"><span>Data I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
@@ -348,13 +348,13 @@ mean(c("1", "2", "3"))
 
 .pull-right5[
 
-<high>Installiere</high> Pakete <high>einmal</high> mit `install.packages()`
+<high>Installer les </high>Packages <high>une fois</high> avec `install.packages()`
 
 ```{r, eval = FALSE}
 install.packages("tidyverse")
 ```
 <br2>
-<high>Lade</high> existierende Pakete <high>jedes mal</high> mit `library()`
+<high>Charger</high> les packages installés <high>à chaque fois </high> avec `library()`
 
 ```{r, eval = FALSE}
 library(tidyverse)
@@ -364,19 +364,19 @@ library(tidyverse)
 ]
 ---
 
-# Funktionen 
+# Fonctions 
 
 .pull-left4[
 <ul>
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignments<br></span></li>
-  <li class="m3"><span>Funktionen</span></li>
+  <li class="m3"><span>Fonctions</span></li>
   <ul class="level">
-    <li><span>Alles geschieht durch eine Funktion</span></li>
-    <li><span>Funktionen haben (Default) Argumente</span></li>
-    <li><span>Die Klasse der Argumente ist wichtig</span></li>
-    <li><span>Funktionen "leben" in Paketen</span></li>
-    <li><span><high>Erhalte Hilfe mit <mono>?</high></span></li>
+    <li><span>Tout passe par les fonctions</span></li>
+    <li><span>Les fonctions ont des arguments (par défaut)</span></li>
+    <li><span>La classe des arguments est importante</span></li>
+    <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
+    <li><span><high>Checher de l'aide avec <mono>?</high></span></li>
   </ul><br>
   <li class="m4g"><span>Data I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>

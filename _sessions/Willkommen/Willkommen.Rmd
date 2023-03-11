@@ -114,7 +114,7 @@ Klicke auf <high>"....running..."</high> auf unserer Website!
   <li class="m2"><span>Chaque bloc contient:</span></li>
   <ul class="level">
     <li><span><b>Introduction </b>basée sur slides (10min)</span></li> 
-    <li><span><b>Exercice </b>individuel (15min)</span></li> 
+    <li><span><b>Exercices </b>individuels (15min)</span></li> 
     <li><span><b>Solution </b>interactive (5min)</span></li> 
   </ul>
 </ul>

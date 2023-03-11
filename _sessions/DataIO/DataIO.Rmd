@@ -63,7 +63,7 @@ options(htmltools.dir.version = FALSE)
 options(width=110)
 options(digits = 4)
 
-require(tidyverse)
+library(tidyverse)
 ```
 
 
@@ -75,7 +75,7 @@ require(tidyverse)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span><high>Données</high></a></span></li>
+  <li class="m4"><span><high>Données I/O</high></a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les  <mono>data.frames</span></li>
@@ -105,7 +105,7 @@ require(tidyverse)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span><high>Charger des données</high></span></li>
     <li><span>Les données "vivent" dans les  <mono>data.frames</span></li>
@@ -139,7 +139,7 @@ read.csv('1_Data/Tourismus.csv')
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span><high>Charger des données</high></span></li>
     <li><span>Les données "vivent" dans les  <mono>data.frames</span></li>
@@ -178,7 +178,7 @@ data
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span><high>Charger des données</high></span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
@@ -207,7 +207,7 @@ data
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span><high>Charger des données</high></span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
@@ -237,7 +237,7 @@ data
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span><high>Charger des données</high></span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
@@ -266,7 +266,7 @@ data
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span><high>Les données "vivent" dans les <mono>data.frames</span></high></li>
@@ -309,7 +309,7 @@ names(data) # Noms des variables
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
@@ -339,7 +339,7 @@ names(data) # Noms des variables
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
@@ -377,7 +377,7 @@ data$Dauer
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
@@ -416,7 +416,7 @@ class(data$Dauer)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
@@ -454,7 +454,7 @@ data$Land
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
@@ -492,7 +492,7 @@ class(data$Land)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2g"><span>Assignations<br></span></li>
   <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4"><span>Données</a></span></li>
+  <li class="m4"><span>Données I/O</a></span></li>
   <ul class="level">
     <li><span>Charger des données</span></li>
     <li><span>Les données "vivent" dans les <mono>data.frames</span></li>
@@ -524,5 +524,5 @@ saveRDS(data, '1_Data/Tourismus_neu.RDS')
 
 class: middle, center
 
-<h1><high>Exercice</high></h1>
+<h1><high>Exercices</high></h1>
 

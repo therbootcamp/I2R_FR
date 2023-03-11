@@ -58,7 +58,7 @@ options(htmltools.dir.version = FALSE)
 options(width=110)
 options(digits = 4)
 
-require(tidyverse)
+library(tidyverse)
 ```
 
 
@@ -186,7 +186,7 @@ summary(res)<br>
   <li class="m2g"><span>Assignations</span></li>
   <li class="m3g"><span>Fonctions</span></li>
   <li class="m4g"><span>Données I/O</a></span></li>
-  <li class="m5g"><span>Analyse^</span></li>
+  <li class="m5g"><span>Analyse</span></li>
 </ul>
 
 ]

@@ -63,7 +63,7 @@ options(htmltools.dir.version = FALSE)
 options(width=110)
 options(digits = 4)
 
-require(tidyverse)
+library(tidyverse)
 ```
 
 

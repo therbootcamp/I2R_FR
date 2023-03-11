@@ -1,6 +1,6 @@
 ---
 title: "Analyse"
-author: "Einführung in die moderne Datenanalyse mit R<br>
+author: "Introduction à l'analyse de données avec R<br>
   <a href='https://therbootcamp.github.io'>
     The R Bootcamp
   </a>
@@ -17,7 +17,7 @@ author: "Einführung in die moderne Datenanalyse mit R<br>
   <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
     <i class='fab fa-linkedin' style='font-size: .9em;'></i>
   </a>"
-date: "Oktober 2022"
+date: "Juin 2023"
 output:
   xaringan::moon_reader:
     css: ["default", "baselrbootcamp.css"]
@@ -63,7 +63,7 @@ options(htmltools.dir.version = FALSE)
 options(width=110)
 options(digits = 4)
 
-require(tidyverse)
+library(tidyverse)
 ```
 
 
@@ -73,13 +73,13 @@ require(tidyverse)
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span><high>Analyse</high></span></li>
     <ul class="level">
-    <li><span>Einfache Statistiken</span></li>
-    <li><span>Einfache Graphiken</span></li>
+    <li><span>Statistiques simples</span></li>
+    <li><span>Graphiques simples</span></li>
     </ul>
 </ul>
 
@@ -95,19 +95,19 @@ require(tidyverse)
 
 ---
 
-# Statistiken
+# Statistiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span><high>Einfache Statistiken</high></span></li>
-    <li><span>Einfache Graphiken</span></li>
+    <li><span><high>Statistiques simples</high></span></li>
+    <li><span>Graphiques simples</span></li>
     </ul>
 </ul>
 
@@ -120,36 +120,36 @@ options(max.print=80,width=40)
 ```
 
 ```{r}
-# Lese Daten in ein Objekt ein
-daten <- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data <- read.csv('1_Data/Tourismus.csv')
 
-# Mittlere Dauer
-mean(daten$Dauer)
+# Moyenne de Dauer
+mean(data$Dauer)
 
-# Median Dauer
-median(daten$Dauer)
+# Mediane de Dauer
+median(data$Dauer)
 
-# Standardabweichung Dauer
-sd(daten$Dauer)
+# Ecart type de Dauer
+sd(data$Dauer)
 
 ```
 ]
 
 ---
 
-# Statistiken
+# Statistiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span><high>Einfache Statistiken</high></span></li>
-    <li><span>Einfache Graphiken</span></li>
+    <li><span><high>Statistiques simples</high></span></li>
+    <li><span>Graphiques simples</span></li>
     </ul>
 </ul>
 
@@ -162,30 +162,30 @@ options(max.print=80,width=40)
 ```
 
 ```{r}
-# Lese Daten in ein Objekt ein
-daten <- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data <- read.csv('1_Data/Tourismus.csv')
 
-# Zusammenfassung Dauer
-summary(daten$Dauer)
+# Sommaire de Dauer
+summary(data$Dauer)
 
 ```
 ]
 
 ---
 
-# Statistiken
+# Statistiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span><high>Einfache Statistiken</high></span></li>
-    <li><span>Einfache Graphiken</span></li>
+    <li><span><high>Statistiques simples</high></span></li>
+    <li><span>Graphiques simples</span></li>
     </ul>
 </ul>
 
@@ -198,30 +198,29 @@ options(max.print=80,width=40)
 ```
 
 ```{r}
-# Lese Daten in ein Objekt ein
-daten <- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data <- read.csv('1_Data/Tourismus.csv')
 
-# Zusammenhang Dauer und Besucher
-cor(daten$Dauer, daten$Besucher)
-
+# Correlation entre Dauer et Besucher
+cor(data$Dauer, data$Besucher)
 ```
 ]
 
 ---
 
-# Statistiken
+# Statistiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span><high>Einfache Statistiken</high></span></li>
-    <li><span>Einfache Graphiken</span></li>
+    <li><span><high>Statistiques simples</high></span></li>
+    <li><span>Graphiques simples</span></li>
     </ul>
 </ul>
 
@@ -234,30 +233,29 @@ options(max.print=80,width=40)
 ```
 
 ```{r}
-# Lese Daten in ein Objekt ein
-daten <- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data <- read.csv('1_Data/Tourismus.csv')
 
-# Dauer nach Region
-aggregate(daten$Dauer, list(daten$Region), mean)
-
+# Moyenne de Dauer par Region¨
+aggregate(data$Dauer ~ data$Region, FUN = mean)
 ```
 ]
 
 ---
 
-# Statistiken
+# Statistiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span><high>Einfache Statistiken</high></span></li>
-    <li><span>Einfache Graphiken</span></li>
+    <li><span><high>Statistiques simples</high></span></li>
+    <li><span>Graphiques simples</span></li>
     </ul>
 </ul>
 
@@ -270,30 +268,30 @@ options(max.print=80,width=40)
 ```
 
 ```{r}
-# Lese Daten in ein Objekt ein
-daten <- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data <- read.csv('1_Data/Tourismus.csv')
 
-# Vergleich der Dauer nach Region
-anova(lm(daten$Dauer ~ daten$Region))
+# Comparaison de Dauer par Region
+anova(lm(data$Dauer ~ data$Region))
 
 ```
 ]
 
 ---
 
-# Statistiken
+# Statistiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span><high>Einfache Statistiken</high></span></li>
-    <li><span>Einfache Graphiken</span></li>
+    <li><span><high>Statistiques simples</high></span></li>
+    <li><span>Graphiques simples</span></li>
     </ul>
 </ul>
 
@@ -306,30 +304,30 @@ options(max.print=80,width=40)
 ```
 
 ```{r}
-# Lese Daten in ein Objekt ein
-daten <- read.csv('1_Data/Tourismus.csv')
+# Charger des données dans un objet
+data <- read.csv('1_Data/Tourismus.csv')
 
-# Vergleich der Dauer nach Region
-anova(lm(daten$Besucher ~ daten$Region))
+# Comparaison de Besucher par Region
+anova(lm(data$Besucher ~ data$Region))
 
 ```
 ]
 
 ---
 
-# Graphiken
+# Graphiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span>Einfache Statistiken</span></li>
-    <li><span><high>Einfache Graphiken</high></span></li>
+    <li><span>Statistiques simples</span></li>
+    <li><span><high>Graphiques simples</high></span></li>
     </ul>
 </ul>
 
@@ -342,27 +340,27 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Histogramm Dauer
-hist(daten$Dauer)
+# Histogramme Dauer
+hist(data$Dauer)
 
 ```
 ]
 
 ---
 
-# Graphiken
+# Graphiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span>Einfache Statistiken</span></li>
-    <li><span><high>Einfache Graphiken</high></span></li>
+    <li><span>Statistiques simples</span></li>
+    <li><span><high>Graphiques simples</high></span></li>
     </ul>
 </ul>
 
@@ -375,27 +373,27 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Histogramm Besucher
-hist(daten$Besucher)
+# Histogramme Besucher
+hist(data$Besucher)
 
 ```
 ]
 
 ---
 
-# Graphiken
+# Graphiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span>Einfache Statistiken</span></li>
-    <li><span><high>Einfache Graphiken</high></span></li>
+    <li><span>Statistiques simples</span></li>
+    <li><span><high>Graphiques simples</high></span></li>
     </ul>
 </ul>
 
@@ -408,27 +406,27 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Streudiagram Besucher x Dauer
-plot(daten$Besucher, daten$Dauer)
+# Diagramme de correlation Besucher x Dauer
+plot(data$Besucher, data$Dauer)
 
 ```
 ]
 
 ---
 
-# Graphiken
+# Graphiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span>Einfache Statistiken</span></li>
-    <li><span><high>Einfache Graphiken</high></span></li>
+    <li><span>Statistiques simples</span></li>
+    <li><span><high>Graphiques simples</high></span></li>
     </ul>
 </ul>
 
@@ -441,8 +439,8 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Streudiagram Besucher x Dauer
-plot(daten$Besucher, daten$Dauer,
+# Diagramme de correlation Besucher (log) x Dauer (log)
+plot(data$Besucher, data$Dauer,
      log = "xy")
 
 ```
@@ -450,19 +448,19 @@ plot(daten$Besucher, daten$Dauer,
 
 ---
 
-# Graphiken
+# Graphiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span>Einfache Statistiken</span></li>
-    <li><span><high>Einfache Graphiken</high></span></li>
+    <li><span>Statistiques simples</span></li>
+    <li><span><high>Graphiques simples</high></span></li>
     </ul>
 </ul>
 
@@ -475,8 +473,8 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Streudiagram Besucher x Dauer
-plot(daten$Besucher, daten$Dauer,
+# Diagramme de correlation Besucher (log) x Dauer (log)
+plot(data$Besucher, data$Dauer,
      log = "xy", col = 'red', pch = 16,
      xlab = 'Besucher', ylab = 'Dauer')
 
@@ -485,19 +483,19 @@ plot(daten$Besucher, daten$Dauer,
 
 ---
 
-# Graphiken
+# Graphiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span>Einfache Statistiken</span></li>
-    <li><span><high>Einfache Graphiken</high></span></li>
+    <li><span>Statistiques simples</span></li>
+    <li><span><high>Graphiques simples</high></span></li>
     </ul>
 </ul>
 
@@ -510,27 +508,27 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Boxplot Dauer nach Region
-boxplot(daten$Dauer ~ daten$Region,
+# Boite à moustaches Dauer (log) par Region
+boxplot(data$Dauer ~ data$Region,
         log="y")
 ```
 ]
 
 ---
 
-# Graphiken
+# Graphiques
 
 .pull-left4[
 
 <ul>
   <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignments</span></li>
-  <li class="m3g"><span>Funktionen</span></li>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5"><span>Analyse</span></li>
     <ul class="level">
-    <li><span>Einfache Statistiken</span></li>
-    <li><span><high>Einfache Graphiken</high></span></li>
+    <li><span>Statistiques simples</span></li>
+    <li><span><high>Graphiques simples</high></span></li>
     </ul>
 </ul>
 
@@ -543,8 +541,8 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Boxplot Besucher nach Region
-boxplot(daten$Besucher ~ daten$Region,
+# Boite à moustaches Besucher (log) par Region
+boxplot(data$Besucher ~ data$Region,
         log="y")
 ```
 ]
@@ -554,6 +552,6 @@ boxplot(daten$Besucher ~ daten$Region,
 
 class: middle, center
 
-<h1><high>Exercice</high></h1>
+<h1><high>Exercices</high></h1>
 
 

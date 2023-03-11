@@ -68,7 +68,7 @@ options(htmltools.dir.version = FALSE)
 options(width=110)
 options(digits = 4)
 
-require(tidyverse)
+library(tidyverse)
 ```
 
 
@@ -87,7 +87,7 @@ require(tidyverse)
     <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
     <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 
@@ -117,7 +117,7 @@ require(tidyverse)
     <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
     <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 ]
@@ -142,7 +142,7 @@ require(tidyverse)
     <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
     <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 ]
@@ -181,7 +181,7 @@ mean(one_two_three)
     <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
     <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 ]
@@ -216,7 +216,7 @@ mean(c(1, 2, 3, NA))
     <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
     <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 ]
@@ -251,7 +251,7 @@ mean(c(1, 2, 3, NA), na.rm = TRUE)
     <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
     <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 ]
@@ -283,7 +283,7 @@ mean(c(1, 2, 3, NA), na.rm = TRUE)
     <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
     <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 ]
@@ -316,7 +316,7 @@ mean(c("1", "2", "3"))
     <li><span><high>Les fonctions "vivent" dans les "Packages"</high></span></li>
     <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 ]
@@ -341,7 +341,7 @@ mean(c("1", "2", "3"))
     <li><span><high>Les fonctions "vivent" dans les "Packages"</high></span></li>
     <li><span>Checher de l'aide avec <mono>?</span></li>
   </ul><br>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 ]
@@ -378,7 +378,7 @@ library(tidyverse)
     <li><span>Les fonctions "vivent" dans les "Packages"</span></li>
     <li><span><high>Checher de l'aide avec <mono>?</high></span></li>
   </ul><br>
-  <li class="m4g"><span>Data I/O</a></span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
   <li class="m5g"><span>Analyse</span></li>
 </ul>
 ]
@@ -394,5 +394,5 @@ library(tidyverse)
 
 class: middle, center
 
-<h1><high>Exercice</high></h1>
+<h1><high>Exercices</high></h1>
 

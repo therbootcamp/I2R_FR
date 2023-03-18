@@ -4,8 +4,8 @@
     <title>Prochaines étapes</title>
     <meta charset="utf-8" />
     <meta name="author" content="Introduction à l’analyse de données avec R   The R Bootcamp                  " />
-    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="baselrbootcamp.css" type="text/css" />
   </head>
   <body>
@@ -75,11 +75,14 @@ Vous comprenez maintenant les bases de R!
 
 &lt;font size = 6&gt;
 
-1. `tidyverse`&lt;br&gt;
-2. `tidyverse` "élargi"&lt;br&gt;
-3. Statistique&lt;br&gt;
-4. Machine Learning&lt;br&gt;
-5. Reporting&lt;br&gt;
+- `{tidyverse}` &lt;br&gt;
+- `{tidyverse}` "élargi"&lt;br&gt;
+- Web scrapping&lt;br&gt;
+- Analyse de texte&lt;br&gt;
+- Statistique&lt;br&gt;
+- Machine Learning&lt;br&gt;
+- Reporting&lt;br&gt;
+- Sites Web&lt;br&gt;
 
 &lt;/font&gt;
 
@@ -342,7 +345,7 @@ L'environment de [`tidyverse`](https://www.tidyverse.org/) contient une collecti
 6. `tidytext` pour les textuelles.
 &lt;br&gt;&lt;br&gt;
 
-&lt;img src="https://github.com/rstudio/hex-stickers/raw/master/PNG/rvest.png" height="200px" /&gt;&lt;img src="https://github.com/rstudio/hex-stickers/raw/master/PNG/haven.png" height="200px" /&gt;&lt;img src="https://github.com/rstudio/hex-stickers/raw/master/PNG/readxl.png" height="200px" /&gt;&lt;img src="https://github.com/rstudio/hex-stickers/raw/master/PNG/lubridate.png" height="200px" /&gt;&lt;img src="https://pbs.twimg.com/media/DeacLnGU0AAlmS9.png" height="200px" /&gt;
+&lt;img src="https://github.com/rstudio/hex-stickers/raw/master/PNG/rvest.png" height="200px" /&gt;&lt;img src="https://github.com/rstudio/hex-stickers/raw/master/PNG/haven.png" height="200px" /&gt;&lt;img src="https://github.com/rstudio/hex-stickers/raw/master/PNG/readxl.png" height="200px" /&gt;&lt;img src="https://github.com/rstudio/hex-stickers/raw/master/PNG/lubridate.png" height="200px" /&gt;
 
 
 ---
@@ -353,12 +356,30 @@ L'environment de [`tidyverse`](https://www.tidyverse.org/) contient une collecti
 
 
 ```r
-# Charger la table de Wikipédia (n'oubliez pas les paquets)
-# read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %&gt;%
-  # html_node(xpath = '//*[@id="mw-content-text"]/div[1]/table[2]') %&gt;%
-  # html_table() %&gt;% as_tibble()
+library(tidytext)
+# Charger la table de Wikipédia (n'oubliez pas les libraries)
+read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %&gt;%
+  html_text() %&gt;%
+  tibble() %&gt;%
+  unnest_tokens(word, ".")
 ```
 
+```
+## # A tibble: 9,497 x 1
+##    word                                       
+##    &lt;chr&gt;                                      
+##  1 r                                          
+##  2 programming                                
+##  3 language                                   
+##  4 wikipediadocument.documentelement.classname
+##  5 client                                     
+##  6 js                                         
+##  7 vector                                     
+##  8 feature                                    
+##  9 language                                   
+## 10 in                                         
+## # ... with 9,487 more rows
+```
 
 ---
 
@@ -368,10 +389,53 @@ L'environment de [`tidyverse`](https://www.tidyverse.org/) contient une collecti
 
 
 ```r
-library(tidytext) ; library(wordcloud)
+library(wordcloud)
 library(dplyr) ; library(stringr)
 
 # Comptage de mots
+read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %&gt;%
+  html_text() %&gt;%
+  tibble() %&gt;%
+  unnest_tokens(word, ".") %&gt;%
+  filter(!str_detect(word, '[:digit:]')) %&gt;%
+  anti_join(stop_words) %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  top_n(100) 
+```
+
+]
+
+.pull-right4[
+
+
+```
+## # A tibble: 108 x 2
+##    word            n
+##    &lt;chr&gt;       &lt;int&gt;
+##  1 output        200
+##  2 mw            197
+##  3 parser        197
+##  4 retrieved      89
+##  5 data           60
+##  6 programming    51
+##  7 hlist          49
+##  8 navbox         48
+##  9 december       47
+## 10 language       42
+## # ... with 98 more rows
+```
+
+]
+---
+
+# Nuage de mots
+
+.pull-left5[
+
+
+```r
+library(dplyr) ; library(tidytext) ; library(wordcloud) ; library(stringr)
+
 counts &lt;- 
   read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %&gt;%
   html_text() %&gt;%
@@ -380,9 +444,10 @@ counts &lt;-
   filter(!str_detect(word, '[:digit:]')) %&gt;%
   anti_join(stop_words) %&gt;%
   count(word, sort = TRUE) %&gt;%
-  top_n(100) 
+  top_n(100)
 
 # Nuage de mots
+par(mar=c(0,0,0,0))
 wordcloud(counts$word, 
           counts$n)
 ```
@@ -391,7 +456,7 @@ wordcloud(counts$word,
 
 .pull-right4[
 
-![](NaechsteSchritte_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+![](NaechsteSchritte_files/figure-html/unnamed-chunk-20-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -483,14 +548,14 @@ rpart(
 
 &lt;br&gt;&lt;br&gt;
 
-![](NaechsteSchritte_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
+![](NaechsteSchritte_files/figure-html/unnamed-chunk-25-1.png)&lt;!-- --&gt;
 
 ]
 ---
 
 # Reporting
 
-R et RStudio fournissent également d'excellents outils pour créer&lt;high&gt;Rapports&lt;/high&gt;, &lt;high&gt;Slides&lt;/high&gt;, et même &lt;high&gt;des sites Web&lt;/high&gt;. 
+R et RStudio fournissent également d'excellents outils pour créer &lt;high&gt;Rapports&lt;/high&gt;, &lt;high&gt;Slides&lt;/high&gt;, et même des &lt;high&gt;sites Web&lt;/high&gt;. 
 1. `rmarkdown` pour des documents PDF crées de manière dynamique.
 2. `xaringan` pour des Slides.
 3. `shiny` pour des sites Web et des Cockpits.
@@ -530,7 +595,7 @@ R et RStudio fournissent également d'excellents outils pour créer&lt;high&gt;R
 &lt;font size = 6&gt;
 1. Appliquer&lt;br&gt;
 2. Manuels&lt;br&gt;
-3. Sites Web&lt;br&gt;
+3. Sources Web&lt;br&gt;
 4. Support et Consulting&lt;br&gt;
 5. Cours avancés&lt;br&gt;
 ]
@@ -620,20 +685,19 @@ Voici une liste partielle de bons livres sur R plus au moins ordonnés selon l'e
 
 .pull-left4[
 
-# Sites Web
+# Sources Web
 
 Le net est probablement le meilleur endroit pour obtenir des informations sur R.
 
 &lt;font size = 4&gt;&lt;i&gt;Naturellement, dans un moteur de recherche:&lt;/i&gt;&lt;/font&gt;
 
-[Google](www.google.com), [DuckDuckGo](duckduckgo.com). Assurez-vous que *R* ou *Rproject* est mentionné dans votre recherche.
+Example dans [Google](https://www.google.com) ou [DuckDuckGo](https://duckduckgo.com) et assurez-vous que *R* ou *Rproject* est mentionné dans votre recherche.
 
-&lt;br&gt;
 &lt;font size = 4&gt;&lt;i&gt;Souvent, vous serez redirigé vers:&lt;/i&gt;&lt;/font&gt;
 
-[R-bloggers](www.r-bloggers.com) informations sur les derniers développements R (comprend une newsletter).
+[R-bloggers](https://www.r-bloggers.com) informations sur les derniers développements R (comprend une newsletter).
 
-[Stackoverflow](https://stackoverflow.com/questions/tagged/r) est une page pour les problèmes R avec des solutions proposés par d'autres utilisateurs. Essayez de publier un problème vous-même. Souvent, vous obtenez des réponses étonnamment rapidement.
+[Stackoverflow tag R](https://stackoverflow.com/questions/tagged/r) est une page pour les problèmes R avec des solutions proposés par d'autres utilisateurs. Essayez de publier un problème vous-même. Souvent, vous obtenez des réponses étonnamment rapidement.
 
 ]
 
@@ -650,6 +714,7 @@ Le net est probablement le meilleur endroit pour obtenir des informations sur R.
 # Support et Consulting
 
 &lt;table class="tg"  style="cellspacing:0; cellpadding:0; border:none"&gt;
+  &lt;col width="22%"&gt;
   &lt;col width="22%"&gt;
   &lt;col width="22%"&gt;
   &lt;col width="22%"&gt;
@@ -695,9 +760,9 @@ Le net est probablement le meilleur endroit pour obtenir des informations sur R.
     &lt;a href="https://www.joao-ramalho.ch/"&gt;&lt;img border="0" alt="W3Schools" src="https://therbootcamp.github.io/img/team/4.png" height="230" style="border-radius:50%"&gt;&lt;/a&gt;&lt;br&gt;
     &lt;p align="center"&gt;
     &lt;font size = 5&gt;João Ramalho&lt;/font&gt;&lt;br&gt;&lt;br&gt;
-    &lt;a href="www.joao-ramalho.ch"&gt;&lt;b&gt;joao-ramalho.ch&lt;/b&gt;&lt;/a&gt;&lt;br&gt;
-    &lt;font size=4&gt;&lt;i&gt;packages: &lt;/i&gt;&lt;/font&gt; 
-    &lt;a href="https://cran.r-project.org/web/packages/industRial/index.html"&gt;&lt;b&gt;industRial&lt;/b&gt;&lt;/a&gt; &lt;br&gt;
+    &lt;a href="https://www.joao-ramalho.ch/"&gt;&lt;b&gt;joao-ramalho.ch&lt;/b&gt;&lt;/a&gt;&lt;br&gt;
+    &lt;font size=4&gt;&lt;i&gt;book/package: &lt;/i&gt;&lt;/font&gt; 
+    &lt;a href="https://j-ramalho.github.io/industRial/"&gt;&lt;b&gt;industRial&lt;/b&gt;&lt;/a&gt; &lt;br&gt;
     &lt;/p&gt;
   &lt;/th&gt;
 
@@ -708,6 +773,8 @@ Le net est probablement le meilleur endroit pour obtenir des informations sur R.
 
 
 # Cours avancés
+
+(Adaptation pour le français en préparation)
 
 
 &lt;table class="tg"  style="cellspacing:0; cellpadding:0; border:none;"&gt;
@@ -723,7 +790,7 @@ Le net est probablement le meilleur endroit pour obtenir des informations sur R.
       &lt;font style="font-size:20px;weight:700"&gt;&lt;br&gt;Einführung in die moderne Datenanalyse mit R&lt;/font&gt;&lt;br&gt;
       &lt;br&gt;
       &lt;img src="https://therbootcamp.github.io/img/courses/0.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"&gt;&lt;/img&gt;&lt;br&gt;&lt;br&gt;
-      &lt;high&gt;Apr 8,&lt;br&gt;2022&lt;/high&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+      &lt;high&gt;&lt;br&gt;&lt;/high&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
     &lt;/p&gt;
   &lt;/td&gt;
   &lt;td&gt;
@@ -732,7 +799,7 @@ Le net est probablement le meilleur endroit pour obtenir des informations sur R.
       &lt;font style="font-size:20px;weight:700"&gt;&lt;br&gt;Explorative Datenanalyse mit R&lt;br&gt;&lt;/font&gt;&lt;br&gt;
       &lt;br&gt;
       &lt;img src="https://therbootcamp.github.io/img/courses/1.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"&gt;&lt;/img&gt;&lt;br&gt;&lt;br&gt;
-      &lt;high&gt;Mar 4-5,&lt;br&gt;2022&lt;/high&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+      &lt;high&gt;&lt;br&gt;&lt;/high&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
     &lt;/p&gt;
   &lt;/td&gt;
   &lt;td&gt;
@@ -741,7 +808,7 @@ Le net est probablement le meilleur endroit pour obtenir des informations sur R.
       &lt;font style="font-size:20px;weight:700"&gt;&lt;br&gt;Statistik mit R&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;br&gt;
       &lt;br&gt;
       &lt;img src="https://therbootcamp.github.io/img/courses/2.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"&gt;&lt;/img&gt;&lt;br&gt;&lt;br&gt;
-      &lt;high&gt;Apr 22-23,&lt;br&gt;2022&lt;/high&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+      &lt;high&gt;&lt;br&gt;&lt;/high&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
       &lt;/a&gt;
     &lt;/p&gt;
   &lt;/td&gt;
@@ -751,7 +818,7 @@ Le net est probablement le meilleur endroit pour obtenir des informations sur R.
       &lt;font style="font-size:20px;weight:700"&gt;&lt;br&gt;Maschinelles Lernen mit R&lt;br&gt;&lt;/font&gt;&lt;br&gt;
       &lt;br&gt;
       &lt;img src="https://therbootcamp.github.io/img/courses/3.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"&gt;&lt;/img&gt;&lt;br&gt;&lt;br&gt;
-      &lt;high&gt;Mai 13-14,&lt;br&gt;2022&lt;/high&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+      &lt;high&gt;&lt;br&gt;&lt;/high&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
       &lt;/a&gt;
     &lt;/p&gt;
   &lt;/td&gt;
@@ -761,7 +828,7 @@ Le net est probablement le meilleur endroit pour obtenir des informations sur R.
       &lt;font style="font-size:20px;weight:700"&gt;&lt;br&gt;Reporting mit R&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;br&gt;
       &lt;br&gt;
       &lt;img src="https://therbootcamp.github.io/img/courses/4.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"&gt;&lt;/img&gt;&lt;br&gt;&lt;br&gt;
-      &lt;high&gt;Jun 10&lt;br&gt;2022&lt;/high&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+      &lt;high&gt;&lt;br&gt;&lt;/high&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
       &lt;/a&gt;
     &lt;/p&gt;
   &lt;/td&gt;
@@ -771,7 +838,7 @@ Le net est probablement le meilleur endroit pour obtenir des informations sur R.
 ---
 
 .pull-left45[
-# Bitte gebt uns Feedback
+# Merci de votre feedback
 &lt;br&gt;&lt;br&gt;
 
 &lt;p align = "center"&gt;
@@ -784,7 +851,6 @@ Le net est probablement le meilleur endroit pour obtenir des informations sur R.
 .pull-right45[
 
 &lt;p align="center"&gt;&lt;br&gt;&lt;br&gt;
-&lt;iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQ0smc25FL4IpNqi52gtdGG5zeozqSiNuxymtcuKRCbUtiFA/viewform?embedded=true" width="430" height="550" frameborder="0" marginheight="0" marginwidth="0"&gt;Loading…&lt;/iframe&gt;&lt;/p&gt;
 
 ]
 
@@ -793,7 +859,7 @@ Le net est probablement le meilleur endroit pour obtenir des informations sur R.
 
 class: center, middle
 
-# Thank you!
+# Merci!
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

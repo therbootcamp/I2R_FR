@@ -1,42 +1,42 @@
-### R Skript zu "Analyse"
-### Kurs "Einführung in die moderne Datenanalyse mit R"
-### Datum: August 2020
-### Autor: The R Bootcamp
+### R script pour le bloc "Analyse"
+### Cours "Introduction à l'analyse de données avec R"
+### Date: Juin 2023
+### Auteur: The R Bootcamp
 
 
-### Einfache Statistiken ----------------------------
+### Statistiques simplaes ----------------------------
 
-# Lese den Datei Tourismus.csv als `daten` ein
-daten <- read.csv("1_Data/Tourismus.csv")
+# Lire le fichier Tourismus.csv et l'assigner à l'objet `data`
+data <- read.csv("1_Data/Tourismus.csv")
 
-# Berechne den Mittelwert (mean()) von den Variablen Besucher und Dauer
-mean(daten$Besucher)
-mean(daten$Dauer)
+# Calculer la moyenne (mean()) des variables Besucher et Daurer
+mean(data$Besucher)
+mean(data$Dauer)
 
-# Berechne den Median (median()) von den Variablen Besucher und Dauer
-median(daten$Besucher)
-median(daten$Dauer)
+# Calculer la moyenne (mediane()) des variables Besucher et Daurer
+median(data$Besucher)
+median(data$Dauer)
 
-# Berechne die Standardabweichung (sd()) von den Variablen Besucher und Dauer
-sd(daten$Besucher)
-sd(daten$Dauer)
+# Calculer l'écart type (sd()) des variables Besucher et Daurer
+sd(data$Besucher)
+sd(data$Dauer)
 
-# Berechne die Korrelation (cor()) zwischen den Variablen Besucher und Dauer
-cor(daten$Besucher, daten$Dauer)
+# Calculer la correlation (cor()) des variables Besucher et Daurer
+cor(data$Besucher, data$Dauer)
 
-### Einfache Graphiken ----------------------------
+### Graphiques simples ----------------------------
 
-# Plotte ein Histogram (hist()) für die Variable Besucher
-hist(daten$Besucher)
+# Tracer un histogramme (hist()) pour la variable Besucher
+hist(data$Besucher)
 
 # Plotte ein Histogram (hist()) für die Variable Dauer
-hist(daten$Dauer)
+hist(data$Dauer)
 
-# Plotte ein Streudiagram (plot()) für die Variablen Dauer und Besucher
-plot(daten$Dauer, daten$Besucher)
+# Tracer un nuage de points (plot()) pour les variables Dauer et Besucher
+plot(data$Dauer, data$Besucher)
 
-# Ändere die Achsen des Streudiagrams zu log-Skalen
-plot(daten$Dauer, daten$Besucher, log = "x")
+# Remplacer les axes du diagramme de dispersion par des échelles logarithmiques
+plot(data$Dauer, data$Besucher, log = "x")
 
-# Plotte ein Boxplot für Besucher als Funktion von Region
-boxplot(daten$Besucher ~ daten$Region)
+# Tracer un diagramme de boîte à moustaches pour les Besucher en fonction de la Region
+boxplot(data$Besucher ~ data$Region)

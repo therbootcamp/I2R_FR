@@ -1,6 +1,6 @@
 ---
-title: "Nächste Schritte"
-author: "Einführung in die moderne Datenanalyse mit R<br>
+title: "Prochaines étapes"
+author: "Introduction à l'analyse de données avec R<br>
   <a href='https://therbootcamp.github.io'>
     The R Bootcamp
   </a>
@@ -17,7 +17,7 @@ author: "Einführung in die moderne Datenanalyse mit R<br>
   <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
     <i class='fab fa-linkedin' style='font-size: .9em;'></i>
   </a>"
-date: "Oktober 2022"
+date: "Juin 2023"
 output:
   xaringan::moon_reader:
     css: ["default", "baselrbootcamp.css"]
@@ -68,29 +68,29 @@ options(digits = 4)
 
 <br><br><br><br><br>
 
-# Glückwunsch!
+# Félicitations
 
-Ihr nun die Grundlagen von R!
+Vous comprenez maintenant les bases de R!
 
 ]
 
 .pull-right4[
 
-<img src="image/schedule.png" height="580" align="center" style="padding-top:16px">
+<img src="image/schedule_fr.png" height="580" align="center" style="padding-top:16px">
 ]
 
 ---
 
-# R kann viel mehr
+# R peut faire beaucoup plus
 
 .pull-left5[
 
 <font size = 6>
 
-1. `tidyverse` Kern<br>
-2. `tidyverse` erweitert<br>
-3. Statistik<br>
-4. Maschinelles Lernen<br>
+1. `tidyverse`<br>
+2. `tidyverse` élargi<br>
+3. Statistique<br>
+4. Machine Learning<br>
 5. Reporting<br>
 
 </font>
@@ -101,21 +101,21 @@ Ihr nun die Grundlagen von R!
 
 
 .pull-right5[
-<p align="center"><img border="0" alt="W3Schools" src="https://www.oreilly.com/library/view/the-art-of/9781593273842/httpatomoreillycomsourcenostarchimages915868.png.jpg" width="400px"></p>
+<p align="center"><img border="0" alt="" src="" width="400px"></p>
 ]
 
 
 ---
 
-# `tidyverse` Kern
+# `tidyverse`
 
-Das [`tidyverse`](https://www.tidyverse.org/) ist im Kern eine Sammlung hoch-performanter, nutzerfreundlicher Pakete, die speziell für eine effizientere Datenanalyse entwickelt wurden. 
-1. `ggplot2` für Grafiken.
-2. `dplyr` für Datenverarbeitung.
-3. `tidyr` für Datenverarbeitung.
-4. `readr` für Daten I/O.
-5. `purrr` für funktionales Programmieren.
-6. `tibble` für moderne `data.frame`s.
+Das [`tidyverse`](https://www.tidyverse.org/) est essentiellement une collection de libraries performantes et conviviales qui ont été spécialement développés pour une analyse de données plus efficace.
+1. `ggplot2` pour les graphique.
+2. `dplyr` pour la transformation de données.
+3. `tidyr` pour le nettoyage de données.
+4. `readr` pour chargement et enrégistrement de données.
+5. `purrr` pour la programmation fonctionnelle.
+6. `tibble` les `data.frame`s modernes.
 <br><br>
 
 ```{r, out.height = "200px", echo = F}
@@ -136,10 +136,10 @@ knitr::include_graphics("http://d33wubrfki0l68.cloudfront.net/f55c43407ae8944b98
 ```{r eval = F, message=F}
 library(tidyverse) ; library(ggrepel)
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
 
-# Erstelle Plot mit ggplot2
+# Créer un graphique avec ggplot2
 ggplot(data = tour,
        mapping = aes(x = Besucher, 
                      y = Dauer,
@@ -156,10 +156,10 @@ ggplot(data = tour,
 ```{r, echo = F, message=FALSE, warning=F,dpi=300,fig.height=5,fig.width=5.5}
 library(tidyverse) ; library(ggrepel)
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
 
-# Plotte Dauer gegen Besucher
+# Graphique de Dauer par rapport à Besucher
 ggplot(data = tour,
        mapping = aes(x = Besucher, 
                      y = Dauer,
@@ -180,10 +180,10 @@ ggplot(data = tour,
 ```{r eval = F, message=F, warning=F}
 library(tidyverse) ; library(ggrepel)
 
-# Lade Tourismus Daten
-tour <- read_csv('1_Data/Tourismus_18.csv') 
+# Chargement des données
+tour <- read_csv('1_Data/Tourismus.csv') 
 
-# Plotte Dauer gegen Besucher
+# Graphique de Dauer par rapport à Besucher
 ggplot(data = tour,
        mapping = aes(x = Besucher, 
                      y = Dauer,
@@ -203,10 +203,10 @@ ggplot(data = tour,
 ```{r, echo = F, message=FALSE, warning=F,dpi=300,fig.height=5,fig.width=5.5}
 library(tidyverse) ; library(ggrepel)
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
 
-# Plotte Dauer gegen Besucher
+# Graphique de Dauer par rapport à Besucher
 ggplot(data = tour,
        mapping = aes(x = Besucher, 
                      y = Dauer,
@@ -231,10 +231,10 @@ ggplot(data = tour,
 ```{r eval = F, message=F, warning=F}
 library(tidyverse) ; library(ggrepel)
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
 
-# Plotte Dauer gegen Besucher
+# Graphique de Dauer par rapport à Besucher
 ggplot(data = tour,
        mapping = aes(x = Besucher, 
                      y = Dauer,
@@ -256,10 +256,10 @@ ggplot(data = tour,
 ```{r, echo = F, message=FALSE, warning=F,dpi=300,fig.height=5,fig.width=5.5}
 library(tidyverse) ; library(ggrepel)
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
 
-# Plotte Dauer gegen Besucher
+# Graphique de Dauer par rapport à Besucher
 ggplot(data = tour,
        mapping = aes(x = Besucher, 
                      y = Dauer,
@@ -283,14 +283,14 @@ ggplot(data = tour,
 ```{r eval = F, message=F, warning=F}
 library(tidyverse) 
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
 
-# Zeige Top 10 Länder
+# Affichage du Top 10 de Nachte par Land
 tour %>%
-  mutate(Nächte = Besucher * Dauer) %>%
-  arrange(desc(Nächte)) %>%
-  select(Land,  Nächte) %>%
+  mutate(Nachte = Besucher * Dauer) %>%
+  arrange(desc(Nachte)) %>%
+  select(Land,  Nachte) %>%
   top_n(10)
 
 
@@ -301,15 +301,15 @@ tour %>%
 .pull-right45[
 
 ```{r, echo = F, message=FALSE,dpi=300,fig.height=5,fig.width=5.5}
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
 tour$Region[tour$Region == 'Australien, Neuseeland, Ozeanien'] = 'Australien'
 
-# Zeige Top 10 Länder
+# Affichage du Top 10 de Nachte par Land
 tour %>%
-  mutate(Nächte = Besucher * Dauer) %>%
-  arrange(desc(Nächte)) %>%
-  select(Land,  Nächte) %>%
+  mutate(Nachte = Besucher * Dauer) %>%
+  arrange(desc(Nachte)) %>%
+  select(Land,  Nachte) %>%
   top_n(10)
 
 ```
@@ -325,16 +325,16 @@ tour %>%
 ```{r eval = F, message=F}
 library(tidyverse) 
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
 
-# Berechne Nächte per Region
+# Affichage des statistiques pour Nachte et Region
 tour %>%
-  mutate(Nächte = Besucher * Dauer) %>%
+  mutate(Nachte = Besucher * Dauer) %>%
   group_by(Region) %>%
   summarize(
-    Nächte_mittel = mean(Nächte),
-    Nächte_summe = sum(Nächte),    
+    Nachte_mittel = mean(Nachte),
+    Nachte_summe = sum(Nachte),    
   )
 
 ```
@@ -344,17 +344,17 @@ tour %>%
 .pull-right45[
 
 ```{r, echo = F, message=FALSE,dpi=300,fig.height=5,fig.width=5.5}
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
 tour$Region[tour$Region == 'Australien, Neuseeland, Ozeanien'] = 'Australien'
 
-# Berechne Nächte per Region
+# Affichage du Top 10 de Nachte par Region
 tour %>%
-  mutate(Nächte = Besucher * Dauer) %>%
+  mutate(Nachte = Besucher * Dauer) %>%
   group_by(Region) %>%
   summarize(
-    Nächte_mittel = mean(Nächte),
-    Nächte_summe = sum(Nächte),    
+    Nachte_mittel = mean(Nachte),
+    Nachte_summe = sum(Nachte),    
   )
 
 ```
@@ -370,16 +370,16 @@ tour %>%
 ```{r eval = F, message=F}
 library(tidyverse) ; library(ggrepel)
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
 europa <- read_csv('1_Data/Europa.csv') 
 
-# Verbinde Nächte mit Äquivalenzeinkommen
+# Verbinde Nachte mit Aquivalenzeinkommen
 tour %>%
-  mutate(Nächte = Besucher * Dauer) %>%
+  mutate(Nachte = Besucher * Dauer) %>%
   left_join(europa) %>%
-  ggplot(aes(x = Äquivalenzeinkommen, 
-             y = Nächte,
+  ggplot(aes(x = Aquivalenzeinkommen, 
+             y = Nachte,
              label = Land)) +
   scale_y_continuous(trans = 'log2') + 
   geom_point() +
@@ -392,24 +392,24 @@ tour %>%
 
 .pull-right45[
 
-```{r, echo = F, message=FALSE, warning = F, dpi=300,fig.height=5,fig.width=5.5}
+```{r fig.height=5, fig.width=5.5, message=FALSE, warning=FALSE, dpi=300, eval=FALSE}
 library(tidyverse) ; library(ggrepel)
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
-europa <- read_csv('1_Data/Europa.csv') 
+europa <- read_csv('1_Data/Europa.csv')
 
-# Berechne Nächte per Region
+# Affichage du Top 10 de Nachte par Region
 tour %>%
-  mutate(Nächte = Besucher * Dauer) %>%
+  mutate(Nachte = Besucher * Dauer) %>%
   left_join(europa) %>%
-  ggplot(aes(x = Äquivalenzeinkommen, 
-             y = Nächte,
+  ggplot(aes(x = Aquivalenzeinkommen,
+             y = Nachte,
              label = Land)) +
-  scale_y_continuous(trans = 'log2') + 
+  scale_y_continuous(trans = 'log2') +
   geom_point() +
   geom_label_repel(size = 2) +
-  theme_bw() 
+  theme_bw()
 
 ```
 
@@ -447,11 +447,11 @@ options(tibble.print_max = 6, tibble.width=90)
 library(xml2) ; library(rvest) ; library(tibble)
 ```
 
-```{r, message=F}
-# Tabelle laden von Wikipedia (Pakete nicht vergessen)
-read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %>%
-  html_node(xpath = '//*[@id="mw-content-text"]/div[1]/table[2]') %>%
-  html_table() %>% as_tibble()
+```{r message=FALSE}
+# Charger la table de Wikipédia (n'oubliez pas les paquets)
+# read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %>%
+  # html_node(xpath = '//*[@id="mw-content-text"]/div[1]/table[2]') %>%
+  # html_table() %>% as_tibble()
 ```
 
 
@@ -465,18 +465,18 @@ read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %>%
 library(tidytext) ; library(wordcloud)
 library(dplyr) ; library(stringr)
 
-# Wörter zählen
+# Comptage de mots
 counts <- 
-  read_html(".../R_(programming_language)") %>%
+  read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %>%
   html_text() %>%
   tibble() %>%
-  unnest_tokens(w, ".") %>%
-  filter(!str_detect(w, '[:digit:]')) %>%
+  unnest_tokens(word, ".") %>%
+  filter(!str_detect(word, '[:digit:]')) %>%
   anti_join(stop_words) %>%
   count(word, sort = TRUE) %>%
   top_n(100) 
 
-# Wordwolke
+# Nuage de mots
 wordcloud(counts$word, 
           counts$n)
   
@@ -489,7 +489,7 @@ wordcloud(counts$word,
 ```{r, message=F, warning=F, echo=F, fig.width=5,fig.height=5,dpi=300}
 library(dplyr) ; library(tidytext) ; library(wordcloud) ; library(stringr)
 
-# Wörter zählen
+# Comptage de mots
 counts <- 
   read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %>%
   html_text() %>%
@@ -500,7 +500,7 @@ counts <-
   count(word, sort = TRUE) %>%
   top_n(100) 
 
-# Wordwolke
+# Nuage de mots
 par(mar=c(0,0,0,0))
 wordcloud(counts$word, 
           counts$n)
@@ -511,25 +511,25 @@ wordcloud(counts$word,
 
 ---
 
-# Statistik
+# Statistique
 
 
 .pull-left45[
 
-```{r, message=F}
+```{r, message=F, eval = FALSE}
 library(tidyverse)
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv')
-länd <- read_csv('1_Data/Länder.csv')                 
+land <- read_csv('1_Data/Lander.csv')                 
 
 # verbinde Daten
 data <- tour %>% 
-  inner_join(länd) %>%
-  mutate(Nächte = Besucher * Dauer)
+  inner_join(land) %>%
+  mutate(Nachte = Besucher * Dauer)
 
 # Regressionsanalyse
-model = lm(Nächte ~ Bevölkerung + 
+model <- lm(Nachte ~ Bevolkerung + 
                     Dichte + BIP,
            data = data)
 ```
@@ -539,18 +539,18 @@ model = lm(Nächte ~ Bevölkerung +
 .pull-right45[
 
 
-```{r, message=F, warning=F}
+```{r, message=F, warning=F, eval = FALSE}
 # Bestimmtheitsmass
 summary(model)$r.squared
 ```
 
 
-```{r, message=F, warning=F, echo=T, eval=F}
+```{r, message=F, warning=F, echo=T, eval=FALSE}
 # Koeffizienten
 summary(model)$coef[,-2]
 ```
 
-```{r, message=F, warning=F, echo=F, eval=T}
+```{r, message=F, warning=F, echo=F, eval=FALSE}
 # Koeffizienten
 summary(model)$coef[,-2]
 ```
@@ -565,18 +565,18 @@ summary(model)$coef[,-2]
 ```{r, message=F, eval=F}
 library(tidyverse) ; library(rpart)
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv')
-länd <- read_csv('1_Data/Länder.csv')                 
+land <- read_csv('1_Data/Lander.csv')                 
 
 # verbinde Daten
 data <- tour %>% 
-  inner_join(länd) %>%
-  mutate(Nächte = Besucher * Dauer)
+  inner_join(land) %>%
+  mutate(Nachte = Besucher * Dauer)
 
 # Regressionsanalyse
 rpart(
-  formula = Besucher ~ Bevölkerung + 
+  formula = Besucher ~ Bevolkerung + 
                        Dichte + BIP,
   data = data) 
   
@@ -588,22 +588,22 @@ rpart(
 
 <br><br>
 
-```{r, message=F, warning=F, echo=F, fig.width=5,fig.height=5,dpi=300}
+```{r, message=F, warning=F, echo=F, fig.width=5,fig.height=5,dpi=300, eval = FALSE}
 library(tidyverse) ; library(rpart)
 library(rattle)
 
-# Lade Tourismus Daten
+# Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv')
-länd <- read_csv('1_Data/Länder.csv')                 
+land <- read_csv('1_Data/Lander.csv')                 
 
 # verbinde Daten
 data <- tour %>% 
-  inner_join(länd) %>%
-  mutate(Nächte = Besucher * Dauer)
+  inner_join(land) %>%
+  mutate(Nachte = Besucher * Dauer)
 
 # Regressionsanalyse
 rpart(
-  formula = Besucher ~ Bevölkerung + 
+  formula = Besucher ~ Bevolkerung + 
                        Dichte + BIP,
   data = data,
   control = rpart.control(cp = 0)) %>%

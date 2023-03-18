@@ -8,6 +8,7 @@ purrr::map(
     "./_sessions/Funktionen/Funktionen.Rmd",
     "./_sessions/DataIO/DataIO.Rmd",
     "./_sessions/Analyse/Analyse.Rmd"
+    #./_sessions/NaechsteSchritte.Rmd
   ),
   rmarkdown::render
 )

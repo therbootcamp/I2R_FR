@@ -6,19 +6,19 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
-# Lese Daten ein
+# Importer des données
 library(tidyverse)
 tour <- read_csv('1_Data/Tourismus.csv')
 ```
 
 ## Baseler Tourismus
 
-Insgesamt kamen nach Basel $`r sum(tour$Besucher)`$ Besucher. 
+Le nombre total de visiteurs arrivés à Bâle est de $`r sum(tour$Besucher)`$ personnes. 
 
-Hier sind Besucher aufgeschlüsselt nach Region.
+Voici les visiteurs répartis par région.
 
 ```{r, message=FALSE, fig.height=4, fig.width=4}
-# Plotte nach Region
+# Graphique par région
 tour %>%
   ggplot(aes(x = Region,
              y = Besucher)) +

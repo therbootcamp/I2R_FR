@@ -88,7 +88,7 @@ Vous comprenez maintenant les bases de R!
 <font size = 6>
 
 1. `tidyverse`<br>
-2. `tidyverse` élargi<br>
+2. `tidyverse` "élargi"<br>
 3. Statistique<br>
 4. Machine Learning<br>
 5. Reporting<br>
@@ -328,7 +328,7 @@ library(tidyverse)
 # Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv') 
 
-# Affichage des statistiques pour Nachte et Region
+# Statistiques de Nachte par Region
 tour %>%
   mutate(Nachte = Besucher * Dauer) %>%
   group_by(Region) %>%
@@ -348,7 +348,7 @@ tour %>%
 tour <- read_csv('1_Data/Tourismus.csv') 
 tour$Region[tour$Region == 'Australien, Neuseeland, Ozeanien'] = 'Australien'
 
-# Affichage du Top 10 de Nachte par Region
+# Statistiques de Nachte par Region
 tour %>%
   mutate(Nachte = Besucher * Dauer) %>%
   group_by(Region) %>%
@@ -363,7 +363,7 @@ tour %>%
 
 ---
 
-# `dplyr`
+# `dplyr` + `gplot2`
 
 .pull-left45[
 
@@ -371,8 +371,8 @@ tour %>%
 library(tidyverse) ; library(ggrepel)
 
 # Chargement des données
-tour <- read_csv('1_Data/Tourismus.csv') 
-europa <- read_csv('1_Data/Europa.csv') 
+tour <- read_csv("1_Data/Tourismus.csv") 
+europa <- read_csv("1_Data/Europa.csv") 
 
 # Verbinde Nachte mit Aquivalenzeinkommen
 tour %>%
@@ -392,12 +392,12 @@ tour %>%
 
 .pull-right45[
 
-```{r fig.height=5, fig.width=5.5, message=FALSE, warning=FALSE, dpi=300, eval=FALSE}
+```{r echo=FALSE, fig.height=5, fig.width=5.5, message=FALSE, warning=FALSE, dpi=300}
 library(tidyverse) ; library(ggrepel)
 
 # Chargement des données
-tour <- read_csv('1_Data/Tourismus.csv') 
-europa <- read_csv('1_Data/Europa.csv')
+tour <- read_csv("1_Data/Tourismus.csv") 
+europa <- read_csv("1_Data/Europa.csv") 
 
 # Affichage du Top 10 de Nachte par Region
 tour %>%
@@ -410,7 +410,6 @@ tour %>%
   geom_point() +
   geom_label_repel(size = 2) +
   theme_bw()
-
 ```
 
 ]
@@ -418,15 +417,15 @@ tour %>%
 
 ---
 
-# `tidyverse` erweitert
+# `tidyverse` "élargi"
 
-Das Umfeld des [`tidyverse`](https://www.tidyverse.org/) beinhaltet eine Sammlung weiterer hoch-performanter, nutzerfreundlicher Pakete, die den tidyverse Kern ergänzen. 
-1. `xlm2` für die Verarbeitung von XML und HTML Dateien.
-2. `rvest` für Web Scraping.
-3. `haven` für SPSS, SAS, und Stata Dateien.
-4. `readxl` für Excel Dateien.
-5. `lubridate` für Zeitvariablen.
-6. `tidytext` für Textverarbeitung.
+L'environment de [`tidyverse`](https://www.tidyverse.org/) contient une collection d'autres packages hautes performances et conviviaux qui complètent le noyau Tidyverse. 
+1. `xlm2` pour le traitement des fichiers XML et HTML.
+2. `rvest` pour le "Web Scraping".
+3. `haven` pour le traitement de données de SPSS, SAS et Stata.
+4. `readxl` pour le traitement de données Excel.
+5. `lubridate` pour les données temporelles.
+6. `tidytext` pour les textuelles.
 <br><br>
 
 ```{r, out.height = "200px", echo = F}
@@ -457,7 +456,7 @@ library(xml2) ; library(rvest) ; library(tibble)
 
 ---
 
-# Textanalyse
+# Analyse de texte
 
 .pull-left5[
 
@@ -516,19 +515,19 @@ wordcloud(counts$word,
 
 .pull-left45[
 
-```{r, message=F, eval = FALSE}
+```{r, message=F, eval = TRUE}
 library(tidyverse)
 
 # Chargement des données
 tour <- read_csv('1_Data/Tourismus.csv')
 land <- read_csv('1_Data/Lander.csv')                 
 
-# verbinde Daten
+# Joindre les données
 data <- tour %>% 
   inner_join(land) %>%
   mutate(Nachte = Besucher * Dauer)
 
-# Regressionsanalyse
+# Régression linéare
 model <- lm(Nachte ~ Bevolkerung + 
                     Dichte + BIP,
            data = data)
@@ -539,19 +538,13 @@ model <- lm(Nachte ~ Bevolkerung +
 .pull-right45[
 
 
-```{r, message=F, warning=F, eval = FALSE}
-# Bestimmtheitsmass
+```{r, message=F, warning=F}
+# Coéficient de détermination
 summary(model)$r.squared
 ```
 
-
-```{r, message=F, warning=F, echo=T, eval=FALSE}
-# Koeffizienten
-summary(model)$coef[,-2]
-```
-
-```{r, message=F, warning=F, echo=F, eval=FALSE}
-# Koeffizienten
+```{r, message=F, warning=F}
+# Coefficients
 summary(model)$coef[,-2]
 ```
 ]
@@ -560,7 +553,7 @@ summary(model)$coef[,-2]
 
 .pull-left45[
 
-# Maschinelles Lernen
+# Machine Learning
 
 ```{r, message=F, eval=F}
 library(tidyverse) ; library(rpart)
@@ -569,12 +562,12 @@ library(tidyverse) ; library(rpart)
 tour <- read_csv('1_Data/Tourismus.csv')
 land <- read_csv('1_Data/Lander.csv')                 
 
-# verbinde Daten
+# Joindres les données
 data <- tour %>% 
   inner_join(land) %>%
   mutate(Nachte = Besucher * Dauer)
 
-# Regressionsanalyse
+# Régression linéare
 rpart(
   formula = Besucher ~ Bevolkerung + 
                        Dichte + BIP,
@@ -588,7 +581,7 @@ rpart(
 
 <br><br>
 
-```{r, message=F, warning=F, echo=F, fig.width=5,fig.height=5,dpi=300, eval = FALSE}
+```{r echo=F, fig.height=5, fig.width=5, message=FALSE, warning=FALSE, dpi=300}
 library(tidyverse) ; library(rpart)
 library(rattle)
 
@@ -596,12 +589,12 @@ library(rattle)
 tour <- read_csv('1_Data/Tourismus.csv')
 land <- read_csv('1_Data/Lander.csv')                 
 
-# verbinde Daten
+# Joindre les données
 data <- tour %>% 
   inner_join(land) %>%
   mutate(Nachte = Besucher * Dauer)
 
-# Regressionsanalyse
+# Régression linéare
 rpart(
   formula = Besucher ~ Bevolkerung + 
                        Dichte + BIP,
@@ -613,12 +606,12 @@ rpart(
 ]
 ---
 
-# Reporting Werkzeuge
+# Reporting
 
-R und RStudio bieten auch exzellente Werkzeuge zum erstellen von <high>Berichten</high>, <high>Slides</high>, und sogar <high>Webseiten</high>. 
-1. `rmarkdown` für dynamische PDF Dokumente.
-2. `xaringan` für Slides.
-3. `shiny` für Webseiten und Cockpits.
+R et RStudio fournissent également d'excellents outils pour créer<high>Rapports</high>, <high>Slides</high>, et même <high>des sites Web</high>. 
+1. `rmarkdown` pour des documents PDF crées de manière dynamique.
+2. `xaringan` pour des Slides.
+3. `shiny` pour des sites Web et des Cockpits.
 
 <br><br>
 
@@ -636,30 +629,32 @@ knitr::include_graphics("https://github.com/rstudio/hex-stickers/raw/master/PNG/
 
 # `rmarkdown`
 
-<p align="left"><img style="height:440px" src="image/markdown.png"></p>
+<p align="left"><img style="height:440px" src="image/rmarkdown_fr.png"></p>
 ]
 
 .pull-right5[
 <br><br>
-<p align="center"><img style="height:510px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="image/markdown2.png"></p>
+<p align="center"><img style="height:510px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="image/pdf_fr.png"></p>
 ]
 
 ---
+
+# `Web sites`
 
 <iframe width="1000" height="600" src="https://vac-lshtm.shinyapps.io/ncov_tracker/?_ga=2.157815026.975657143.1601587486-2064892133.1598629448" frameborder="0" allowfullscreen></iframe>
 
 ---
 
-# Nächste Schritte
+# Prochaines étapes
 
 .pull-left5[
 <font size = 4><i>
 <font size = 6>
-1. Anwenden<br>
-2. Bücher<br>
-3. Webseiten<br>
-4. Hilfe & Consulting<br>
-5. Weiterführende Kurse<br>
+1. Appliquer<br>
+2. Manuels<br>
+3. Sites Web<br>
+4. Support et Consulting<br>
+5. Cours avancés<br>
 ]
 
 </font>
@@ -671,9 +666,9 @@ knitr::include_graphics("https://github.com/rstudio/hex-stickers/raw/master/PNG/
 
 ---
 
-# Bücher  
+# Manuels
 
-Hier ist eine unvollständige Liste guter Bücher über R lose geordnet nach vorausgesetzter Erfahrung.<br><br>
+Voici une liste partielle de bons livres sur R plus au moins ordonnés selon l'expérience de l'utilisateur.<br><br>
 
 <table width="80%" style="cellspacing:0; cellpadding:0; border:none;">
 
@@ -747,20 +742,20 @@ Hier ist eine unvollständige Liste guter Bücher über R lose geordnet nach vor
 
 .pull-left4[
 
-# Webseiten
+# Sites Web
 
-Das Netz ist vll. der beste Ort für Informationen über R.
+Le net est probablement le meilleur endroit pour obtenir des informations sur R.
 
-<font size = 4><i>Beginnt eure Suche mit:</i></font>
+<font size = 4><i>Naturellement, dans un moteur de recherche:</i></font>
 
-[Google](www.google.com). Stellt sicher, dass ihr *R* oder *Rproject* mit in eurer Suche habt. 
+[Google](www.google.com), [DuckDuckGo](duckduckgo.com). Assurez-vous que *R* ou *Rproject* est mentionné dans votre recherche.
 
 <br>
-<font size = 4><i>Meistens werdet ihr dann weitergeleitet zu:</i></font>
+<font size = 4><i>Souvent, vous serez redirigé vers:</i></font>
 
-[R-bloggers](www.r-bloggers.com) informiert euch über die neusten R Entwicklungen. Meldet euch für den Newsletter an.
+[R-bloggers](www.r-bloggers.com) informations sur les derniers développements R (comprend une newsletter).
 
-[Stackoverflow](https://stackoverflow.com/questions/tagged/r) ist eine Seite für R Probleme und Lösungen. Versucht selbst mal ein Problem zu posten. Oft bekommt ihr erstaunlich schnell Antwort.
+[Stackoverflow](https://stackoverflow.com/questions/tagged/r) est une page pour les problèmes R avec des solutions proposés par d'autres utilisateurs. Essayez de publier un problème vous-même. Souvent, vous obtenez des réponses étonnamment rapidement.
 
 ]
 
@@ -774,7 +769,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
 
 ---
 
-# Hilfe & Consulting
+# Support et Consulting
 
 <table class="tg"  style="cellspacing:0; cellpadding:0; border:none">
   <col width="22%">
@@ -816,6 +811,17 @@ Das Netz ist vll. der beste Ort für Informationen über R.
     </p>
   </th>
 
+  <th class="tg-yw4l" valign='top'>
+    <p align="center">
+    <p align="center"><br>
+    <a href="https://www.joao-ramalho.ch/"><img border="0" alt="W3Schools" src="https://therbootcamp.github.io/img/team/4.png" height="230" style="border-radius:50%"></a><br>
+    <p align="center">
+    <font size = 5>João Ramalho</font><br><br>
+    <a href="www.joao-ramalho.ch"><b>joao-ramalho.ch</b></a><br>
+    <font size=4><i>packages: </i></font> 
+    <a href="https://cran.r-project.org/web/packages/industRial/index.html"><b>industRial</b></a> <br>
+    </p>
+  </th>
 
 </tr>
 
@@ -823,7 +829,9 @@ Das Netz ist vll. der beste Ort für Informationen über R.
 ---
 
 
-# Weiterführende Kurse
+# Cours avancés
+
+(Adaptation pour le français en préparation)
 
 
 <table class="tg"  style="cellspacing:0; cellpadding:0; border:none;">
@@ -839,7 +847,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
       <font style="font-size:20px;weight:700"><br>Einführung in die moderne Datenanalyse mit R</font><br>
       <br>
       <img src="https://therbootcamp.github.io/img/courses/0.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
-      <high>Apr 8,<br>2022</high><br><br><br><br>
+      <high><br></high><br><br><br><br>
     </p>
   </td>
   <td>
@@ -848,7 +856,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
       <font style="font-size:20px;weight:700"><br>Explorative Datenanalyse mit R<br></font><br>
       <br>
       <img src="https://therbootcamp.github.io/img/courses/1.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
-      <high>Mar 4-5,<br>2022</high><br><br><br><br>
+      <high><br></high><br><br><br><br>
     </p>
   </td>
   <td>
@@ -857,7 +865,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
       <font style="font-size:20px;weight:700"><br>Statistik mit R<br><br></font><br>
       <br>
       <img src="https://therbootcamp.github.io/img/courses/2.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
-      <high>Apr 22-23,<br>2022</high><br><br><br><br>
+      <high><br></high><br><br><br><br>
       </a>
     </p>
   </td>
@@ -867,7 +875,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
       <font style="font-size:20px;weight:700"><br>Maschinelles Lernen mit R<br></font><br>
       <br>
       <img src="https://therbootcamp.github.io/img/courses/3.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
-      <high>Mai 13-14,<br>2022</high><br><br><br><br>
+      <high><br></high><br><br><br><br>
       </a>
     </p>
   </td>
@@ -877,7 +885,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
       <font style="font-size:20px;weight:700"><br>Reporting mit R<br><br></font><br>
       <br>
       <img src="https://therbootcamp.github.io/img/courses/4.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
-      <high>Jun 10<br>2022</high><br><br><br><br>
+      <high><br></high><br><br><br><br>
       </a>
     </p>
   </td>
@@ -887,7 +895,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
 ---
 
 .pull-left45[
-# Bitte gebt uns Feedback
+# Merci de votre feedback
 <br><br>
 
 <p align = "center">

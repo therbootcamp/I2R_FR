@@ -124,7 +124,7 @@ Klicke auf <high>"....running..."</high> auf unserer Website!
 
 .pull-right4[
 <br><br>
-<img src="image/schedule.png" height="525" align="center" style="padding-top:16px">
+<img src="image/schedule_fr.png" height="525" align="center" style="padding-top:16px">
 
 ]
 

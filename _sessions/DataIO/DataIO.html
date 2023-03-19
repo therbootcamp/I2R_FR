@@ -109,21 +109,21 @@ layout: true
 
 ```r
 # Charger des données
-read.csv('1_Data/Tourismus.csv')
+read.csv('1_Data/tourisme.csv')
 ```
 
 ```
-##               Land Region Jahr Besucher Dauer
-## 1          Belgien Europa 2018      920 1.727
-## 2        Bulgarien Europa 2018      138 2.101
-## 3  D\303\244nemark Europa 2018      301 1.827
-## 4      Deutschland Europa 2018    10564 1.709
-## 5          Estland Europa 2018       24 2.125
-## 6         Finnland Europa 2018      130 2.008
-## 7       Frankreich Europa 2018     3401 1.555
-## 8     Griechenland Europa 2018      195 2.651
-## 9           Irland Europa 2018      374 2.332
-## 10          Island Europa 2018       32 1.781
+##            Pays Region Année Visiteurs Durée
+## 1       Belgien Europa  2018       920 1.727
+## 2     Bulgarien Europa  2018       138 2.101
+## 3      Dänemark Europa  2018       301 1.827
+## 4   Deutschland Europa  2018     10564 1.709
+## 5       Estland Europa  2018        24 2.125
+## 6      Finnland Europa  2018       130 2.008
+## 7    Frankreich Europa  2018      3401 1.555
+## 8  Griechenland Europa  2018       195 2.651
+## 9        Irland Europa  2018       374 2.332
+## 10       Island Europa  2018        32 1.781
 ##  [ reached 'max' / getOption("max.print") -- omitted 61 rows ]
 ```
 ]
@@ -156,26 +156,21 @@ read.csv('1_Data/Tourismus.csv')
 
 
 ```r
-# Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+# Charger des données et assigner à un objet
+tourisme &lt;- read.csv('1_Data/tourisme.csv')
 
 # Voir les données
-data
+head(tourisme)
 ```
 
 ```
-##               Land Region Jahr Besucher Dauer
-## 1          Belgien Europa 2018      920 1.727
-## 2        Bulgarien Europa 2018      138 2.101
-## 3  D\303\244nemark Europa 2018      301 1.827
-## 4      Deutschland Europa 2018    10564 1.709
-## 5          Estland Europa 2018       24 2.125
-## 6         Finnland Europa 2018      130 2.008
-## 7       Frankreich Europa 2018     3401 1.555
-## 8     Griechenland Europa 2018      195 2.651
-## 9           Irland Europa 2018      374 2.332
-## 10          Island Europa 2018       32 1.781
-##  [ reached 'max' / getOption("max.print") -- omitted 61 rows ]
+##          Pays Region Année Visiteurs Durée
+## 1     Belgien Europa  2018       920 1.727
+## 2   Bulgarien Europa  2018       138 2.101
+## 3    Dänemark Europa  2018       301 1.827
+## 4 Deutschland Europa  2018     10564 1.709
+## 5     Estland Europa  2018        24 2.125
+## 6    Finnland Europa  2018       130 2.008
 ```
 ]
 
@@ -204,7 +199,7 @@ data
 
 .pull-right5[
 &lt;p align = "center"&gt;
-&lt;img src="image/autocompl1.png"&gt;
+&lt;img src="image/autocompl1_fr.png"&gt;
 &lt;/p&gt;
 
 ]
@@ -233,7 +228,7 @@ data
 
 .pull-right5[
 &lt;p align = "center"&gt;
-&lt;img src="image/autocompl2a.png"&gt;
+&lt;img src="image/autocompl2_fr.png"&gt;
 &lt;/p&gt;
 
 ]
@@ -263,7 +258,7 @@ data
 
 .pull-right5[
 &lt;p align = "center"&gt;
-&lt;img src="image/autocompl2b.png"&gt;
+&lt;img src="image/autocompl3_fr.png"&gt;
 &lt;/p&gt;
 
 ]
@@ -297,10 +292,10 @@ data
 
 ```r
 # Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+tourisme &lt;- read.csv('1_Data/tourisme.csv')
 
 # Classe des données
-class(data)
+class(tourisme)
 ```
 
 ```
@@ -308,7 +303,7 @@ class(data)
 ```
 
 ```r
-dim(data) # Dimensions
+dim(tourisme) # Dimensions
 ```
 
 ```
@@ -316,12 +311,12 @@ dim(data) # Dimensions
 ```
 
 ```r
-names(data) # Noms des variables
+names(tourisme) # Noms des variables
 ```
 
 ```
-## [1] "Land"     "Region"   "Jahr"    
-## [4] "Besucher" "Dauer"
+## [1] "Pays"      "Region"    "Année"    
+## [4] "Visiteurs" "Durée"
 ```
 ]
 
@@ -385,10 +380,10 @@ names(data) # Noms des variables
 
 ```r
 # Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+tourisme &lt;- read.csv('1_Data/tourisme.csv')
 
 # Extraire une variable avec $
-data$Dauer
+tourisme$Durée
 ```
 
 ```
@@ -436,10 +431,10 @@ data$Dauer
 
 ```r
 # Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+tourisme &lt;- read.csv('1_Data/tourisme.csv')
 
 # Extraire une variable avec $
-class(data$Dauer)
+class(tourisme$Durée)
 ```
 
 ```
@@ -477,33 +472,23 @@ class(data$Dauer)
 
 ```r
 # Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+tourisme &lt;- read.csv('1_Data/tourisme.csv')
 
 # Extraire une variable avec $
-data$Land
+tourisme$Pays
 ```
 
 ```
-##  [1] "Belgien"          
-##  [2] "Bulgarien"        
-##  [3] "D\303\244nemark"  
-##  [4] "Deutschland"      
-##  [5] "Estland"          
-##  [6] "Finnland"         
-##  [7] "Frankreich"       
-##  [8] "Griechenland"     
-##  [9] "Irland"           
-## [10] "Island"           
-## [11] "Italien"          
-## [12] "Kroatien"         
-## [13] "Lettland"         
-## [14] "Liechtenstein"    
-## [15] "Litauen"          
-## [16] "Luxemburg"        
-## [17] "Malta"            
-## [18] "Niederlande"      
-## [19] "Norwegen"         
-## [20] "\303\226sterreich"
+##  [1] "Belgien"       "Bulgarien"    
+##  [3] "Dänemark"      "Deutschland"  
+##  [5] "Estland"       "Finnland"     
+##  [7] "Frankreich"    "Griechenland" 
+##  [9] "Irland"        "Island"       
+## [11] "Italien"       "Kroatien"     
+## [13] "Lettland"      "Liechtenstein"
+## [15] "Litauen"       "Luxemburg"    
+## [17] "Malta"         "Niederlande"  
+## [19] "Norwegen"      "Österreich"   
 ##  [ reached getOption("max.print") -- omitted 51 entries ]
 ```
 ]
@@ -537,10 +522,10 @@ data$Land
 
 ```r
 # Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+tourisme &lt;- read.csv('1_Data/tourisme.csv')
 
 # Classe de la variable
-class(data$Land)
+class(tourisme$Pays)
 ```
 
 ```
@@ -576,11 +561,13 @@ class(data$Land)
 
 
 ```r
-# Enrégistrer des données dans un fichier au format csv
-write.csv(data, '1_Data/Tourismus_neu.csv')
+# Enrégistrer des données 
+# dans un fichier au format csv
+write.csv(tourisme, '1_Data/tourisme_2.csv')
 
-# Enrégistrer des données dans un fichier au format RDS
-saveRDS(data, '1_Data/Tourismus_neu.RDS')
+# Enrégistrer des données 
+# dans un fichier au format RDS
+saveRDS(tourisme, '1_Data/tourisme_2.RDS')
 ```
 ]
 

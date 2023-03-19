@@ -125,7 +125,7 @@ options(max.print=50)
 
 ```{r}
 # Charger des données
-read.csv('1_Data/Tourismus.csv')
+read.csv('1_Data/tourisme.csv')
 ```
 ]
 
@@ -158,11 +158,11 @@ options(max.print=50)
 ```
 
 ```{r}
-# Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
+# Charger des données et assigner à un objet
+tourisme <- read.csv('1_Data/tourisme.csv')
 
 # Voir les données
-data
+head(tourisme)
 
 ```
 ]
@@ -192,7 +192,7 @@ data
 
 .pull-right5[
 <p align = "center">
-<img src="image/autocompl1.png">
+<img src="image/autocompl1_fr.png">
 </p>
 
 ]
@@ -221,7 +221,7 @@ data
 
 .pull-right5[
 <p align = "center">
-<img src="image/autocompl2a.png">
+<img src="image/autocompl2_fr.png">
 </p>
 
 ]
@@ -251,7 +251,7 @@ data
 
 .pull-right5[
 <p align = "center">
-<img src="image/autocompl2b.png">
+<img src="image/autocompl3_fr.png">
 </p>
 
 ]
@@ -286,14 +286,14 @@ options(max.print=20,width=40)
 
 ```{r}
 # Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
+tourisme <- read.csv('1_Data/tourisme.csv')
 
 # Classe des données
-class(data)
+class(tourisme)
 
-dim(data) # Dimensions
+dim(tourisme) # Dimensions
 
-names(data) # Noms des variables
+names(tourisme) # Noms des variables
 
 ```
 ]
@@ -359,10 +359,10 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
+tourisme <- read.csv('1_Data/tourisme.csv')
 
 # Extraire une variable avec $
-data$Dauer
+tourisme$Durée
 
 ```
 ]
@@ -397,10 +397,10 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
+tourisme <- read.csv('1_Data/tourisme.csv')
 
 # Extraire une variable avec $
-class(data$Dauer)
+class(tourisme$Durée)
 
 ```
 ]
@@ -436,10 +436,10 @@ options(max.print=20,width=40)
 
 ```{r}
 # Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
+tourisme <- read.csv('1_Data/tourisme.csv')
 
 # Extraire une variable avec $
-data$Land
+tourisme$Pays
 
 ```
 ]
@@ -474,10 +474,10 @@ options(max.print=20,width=40)
 
 ```{r}
 # Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
+tourisme <- read.csv('1_Data/tourisme.csv')
 
 # Classe de la variable
-class(data$Land)
+class(tourisme$Pays)
 
 ```
 ]
@@ -511,11 +511,13 @@ options(max.print=80,width=40)
 ```
 
 ```{r}
-# Enrégistrer des données dans un fichier au format csv
-write.csv(data, '1_Data/Tourismus_neu.csv')
+# Enrégistrer des données 
+# dans un fichier au format csv
+write.csv(tourisme, '1_Data/tourisme_2.csv')
 
-# Enrégistrer des données dans un fichier au format RDS
-saveRDS(data, '1_Data/Tourismus_neu.RDS')
+# Enrégistrer des données 
+# dans un fichier au format RDS
+saveRDS(tourisme, '1_Data/tourisme_2.RDS')
 
 ```
 ]

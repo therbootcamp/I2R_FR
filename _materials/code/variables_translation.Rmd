@@ -1,0 +1,40 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Setup
+
+```{r}
+library(readr)
+```
+
+
+# Locale
+
+```{r}
+stringi::stri_locale_list()
+```
+
+```{r}
+Sys.setlocale(category = "LC_ALL", locale = "fr_FR.UTF-8")
+Sys.getlocale()
+```
+
+# Tourismus.csv
+
+```{r}
+data <- read.csv('1_Data/Tourismus.csv')
+head(data)
+
+names(data) <- c("Pays","Region","Année", "Visiteurs", "Durée")
+head(data)
+
+class(data)
+```
+```{r}
+write_csv(data, "_sessions/DataIO/1_Data/tourisme.csv")
+```
+
+# 

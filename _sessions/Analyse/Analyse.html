@@ -41,7 +41,7 @@ layout: true
     &lt;/a&gt;
     &lt;a href="https://therbootcamp.github.io/"&gt;
       &lt;font color="#7E7E7E"&gt;
-      Introduction à l'analyse de données avec R | June 2023
+      Introduction à l'analyse de données avec R | Juin 2023
       &lt;/font&gt;
     &lt;/a&gt;
     &lt;/span&gt;
@@ -105,10 +105,10 @@ layout: true
 
 ```r
 # Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+tourisme &lt;- read.csv("1_Data/tourisme.csv")
 
-# Moyenne de Dauer
-mean(data$Dauer)
+# Moyenne de Durée
+mean(tourisme$Durée)
 ```
 
 ```
@@ -116,8 +116,8 @@ mean(data$Dauer)
 ```
 
 ```r
-# Mediane de Dauer
-median(data$Dauer)
+# Mediane de Durée
+median(tourisme$Durée)
 ```
 
 ```
@@ -125,8 +125,8 @@ median(data$Dauer)
 ```
 
 ```r
-# Ecart type de Dauer
-sd(data$Dauer)
+# Ecart type de Durée
+sd(tourisme$Durée)
 ```
 
 ```
@@ -161,10 +161,10 @@ sd(data$Dauer)
 
 ```r
 # Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+tourisme &lt;- read.csv("1_Data/tourisme.csv")
 
-# Sommaire de Dauer
-summary(data$Dauer)
+# Sommaire de Durée
+summary(tourisme$Durée)
 ```
 
 ```
@@ -202,10 +202,10 @@ summary(data$Dauer)
 
 ```r
 # Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+tourisme &lt;- read.csv("1_Data/tourisme.csv")
 
-# Correlation entre Dauer et Besucher
-cor(data$Dauer, data$Besucher)
+# Correlation entre Durée et Visiteurs
+cor(tourisme$Durée, tourisme$Visiteurs)
 ```
 
 ```
@@ -240,25 +240,23 @@ cor(data$Dauer, data$Besucher)
 
 ```r
 # Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+tourisme &lt;- read.csv("1_Data/tourisme.csv")
 
-# Moyenne de Dauer par Region¨
-aggregate(data$Dauer ~ data$Region, FUN = mean)
+# Moyenne de Durée par Region
+aggregate(
+  tourisme$Durée ~ tourisme$Pays, 
+  FUN = mean) |&gt;
+  head()
 ```
 
 ```
-##                        data$Region
-## 1                           Afrika
-## 2                          Amerika
-## 3                            Asien
-## 4 Australien, Neuseeland, Ozeanien
-## 5                           Europa
-##   data$Dauer
-## 1      2.809
-## 2      2.680
-## 3      2.860
-## 4      2.483
-## 5      2.095
+##   tourisme$Pays tourisme$Durée
+## 1       Ägypten          2.585
+## 2   Argentinien          2.479
+## 3    Australien          2.216
+## 4       Bahrain          2.000
+## 5       Belgien          1.727
+## 6     Brasilien          3.220
 ```
 ]
 
@@ -289,26 +287,29 @@ aggregate(data$Dauer ~ data$Region, FUN = mean)
 
 ```r
 # Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+tourisme &lt;- read.csv("1_Data/tourisme.csv")
 
-# Comparaison de Dauer par Region
-anova(lm(data$Dauer ~ data$Region))
+# Comparaison de Durée par Pays
+anova(lm(tourisme$Durée ~ tourisme$Pays))
+```
+
+```
+## Warning in anova.lm(lm(tourisme$Durée ~
+## tourisme$Pays)): Les tests F d'ANOVA sur
+## un ajustement pratiquement parfait ne
+## sont pas fiables
 ```
 
 ```
 ## Analysis of Variance Table
 ## 
-## Response: data$Dauer
-##             Df Sum Sq Mean Sq F value
-## data$Region  4    8.9   2.229    2.32
-## Residuals   66   63.5   0.962        
-##             Pr(&gt;F)  
-## data$Region  0.066 .
-## Residuals           
-## ---
-## Signif. codes:  
-##   0 '***' 0.001 '**' 0.01 '*' 0.05
-##   '.' 0.1 ' ' 1
+## Response: tourisme$Durée
+##               Df Sum Sq Mean Sq F value
+## tourisme$Pays 70   72.4    1.03     NaN
+## Residuals      0    0.0     NaN        
+##               Pr(&gt;F)
+## tourisme$Pays    NaN
+## Residuals
 ```
 ]
 
@@ -339,21 +340,21 @@ anova(lm(data$Dauer ~ data$Region))
 
 ```r
 # Charger des données dans un objet
-data &lt;- read.csv('1_Data/Tourismus.csv')
+tourisme &lt;- read.csv("1_Data/tourisme.csv")
 
-# Comparaison de Besucher par Region
-anova(lm(data$Besucher ~ data$Region))
+# Comparaison de Visiteurs par Region
+anova(lm(tourisme$Visiteurs ~ tourisme$Region))
 ```
 
 ```
 ## Analysis of Variance Table
 ## 
-## Response: data$Besucher
-##             Df   Sum Sq Mean Sq F value
-## data$Region  4 7.15e+06 1787339    0.73
-## Residuals   66 1.61e+08 2437029        
-##             Pr(&gt;F)
-## data$Region   0.57
+## Response: tourisme$Visiteurs
+##                 Df   Sum Sq Mean Sq
+## tourisme$Region  4 7.15e+06 1787339
+## Residuals       66 1.61e+08 2437029
+##                 F value Pr(&gt;F)
+## tourisme$Region    0.73   0.57
 ## Residuals
 ```
 ]
@@ -384,8 +385,8 @@ anova(lm(data$Besucher ~ data$Region))
 
 
 ```r
-# Histogramme Dauer
-hist(data$Dauer)
+# Histogramme Durée
+hist(tourisme$Durée)
 ```
 
 ![](Analyse_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
@@ -417,8 +418,8 @@ hist(data$Dauer)
 
 
 ```r
-# Histogramme Besucher
-hist(data$Besucher)
+# Histogramme Visiteurs
+hist(tourisme$Visiteurs)
 ```
 
 ![](Analyse_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
@@ -450,8 +451,8 @@ hist(data$Besucher)
 
 
 ```r
-# Diagramme de correlation Besucher x Dauer
-plot(data$Besucher, data$Dauer)
+# Diagramme de correlation Visiteurs x Durée
+plot(tourisme$Visiteurs, tourisme$Durée)
 ```
 
 ![](Analyse_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
@@ -483,8 +484,9 @@ plot(data$Besucher, data$Dauer)
 
 
 ```r
-# Diagramme de correlation Besucher (log) x Dauer (log)
-plot(data$Besucher, data$Dauer,
+# Diagramme de correlation 
+# Visiteurs (log) x Durée (log)
+plot(tourisme$Visiteurs, tourisme$Durée,
      log = "xy")
 ```
 
@@ -517,10 +519,11 @@ plot(data$Besucher, data$Dauer,
 
 
 ```r
-# Diagramme de correlation Besucher (log) x Dauer (log)
-plot(data$Besucher, data$Dauer,
+# Diagramme de correlation 
+# Visiteurs (log) x Durée (log)
+plot(tourisme$Visiteurs, tourisme$Durée,
      log = "xy", col = 'red', pch = 16,
-     xlab = 'Besucher', ylab = 'Dauer')
+     xlab = 'Visiteurs', ylab = 'Durée')
 ```
 
 ![](Analyse_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
@@ -552,8 +555,8 @@ plot(data$Besucher, data$Dauer,
 
 
 ```r
-# Boite à moustaches Dauer (log) par Region
-boxplot(data$Dauer ~ data$Region,
+# Boite à moustaches Durée (log) par Region
+boxplot(tourisme$Durée ~ tourisme$Region,
         log="y")
 ```
 
@@ -586,8 +589,8 @@ boxplot(data$Dauer ~ data$Region,
 
 
 ```r
-# Boite à moustaches Besucher (log) par Region
-boxplot(data$Besucher ~ data$Region,
+# Boite à moustaches Visiteurs (log) par Region
+boxplot(tourisme$Visiteurs ~ tourisme$Region,
         log="y")
 ```
 

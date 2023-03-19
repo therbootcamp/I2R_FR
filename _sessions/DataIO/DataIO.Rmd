@@ -45,7 +45,7 @@ layout: true
     </a>
     <a href="https://therbootcamp.github.io/">
       <font color="#7E7E7E">
-      Introduction à l'analyse de données avec R | June 2023
+      Introduction à l'analyse de données avec R | Juin 2023
       </font>
     </a>
     </span>

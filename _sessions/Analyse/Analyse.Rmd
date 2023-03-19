@@ -45,7 +45,7 @@ layout: true
     </a>
     <a href="https://therbootcamp.github.io/">
       <font color="#7E7E7E">
-      Introduction à l'analyse de données avec R | June 2023
+      Introduction à l'analyse de données avec R | Juin 2023
       </font>
     </a>
     </span>
@@ -121,52 +121,16 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
+tourisme <- read.csv("1_Data/tourisme.csv")
 
-# Moyenne de Dauer
-mean(data$Dauer)
+# Moyenne de Durée
+mean(tourisme$Durée)
 
-# Mediane de Dauer
-median(data$Dauer)
+# Mediane de Durée
+median(tourisme$Durée)
 
-# Ecart type de Dauer
-sd(data$Dauer)
-
-```
-]
-
----
-
-# Statistiques
-
-.pull-left4[
-
-<ul>
-  <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignations</span></li>
-  <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4g"><span>Données I/O</a></span></li>
-  <li class="m5"><span>Analyse</span></li>
-    <ul class="level">
-    <li><span><high>Statistiques simples</high></span></li>
-    <li><span>Graphiques simples</span></li>
-    </ul>
-</ul>
-
-]
-
-.pull-right5[
-
-```{r, echo = F}
-options(max.print=80,width=40)
-```
-
-```{r}
-# Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
-
-# Sommaire de Dauer
-summary(data$Dauer)
+# Ecart type de Durée
+sd(tourisme$Durée)
 
 ```
 ]
@@ -199,80 +163,10 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
+tourisme <- read.csv("1_Data/tourisme.csv")
 
-# Correlation entre Dauer et Besucher
-cor(data$Dauer, data$Besucher)
-```
-]
-
----
-
-# Statistiques
-
-.pull-left4[
-
-<ul>
-  <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignations</span></li>
-  <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4g"><span>Données I/O</a></span></li>
-  <li class="m5"><span>Analyse</span></li>
-    <ul class="level">
-    <li><span><high>Statistiques simples</high></span></li>
-    <li><span>Graphiques simples</span></li>
-    </ul>
-</ul>
-
-]
-
-.pull-right5[
-
-```{r, echo = F}
-options(max.print=80,width=40)
-```
-
-```{r}
-# Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
-
-# Moyenne de Dauer par Region¨
-aggregate(data$Dauer ~ data$Region, FUN = mean)
-```
-]
-
----
-
-# Statistiques
-
-.pull-left4[
-
-<ul>
-  <li class="m1g"><span>R(Studio)<br></span></li>
-  <li class="m2g"><span>Assignations</span></li>
-  <li class="m3g"><span>Fonctions</span></li>
-  <li class="m4g"><span>Données I/O</a></span></li>
-  <li class="m5"><span>Analyse</span></li>
-    <ul class="level">
-    <li><span><high>Statistiques simples</high></span></li>
-    <li><span>Graphiques simples</span></li>
-    </ul>
-</ul>
-
-]
-
-.pull-right5[
-
-```{r, echo = F}
-options(max.print=80,width=40)
-```
-
-```{r}
-# Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
-
-# Comparaison de Dauer par Region
-anova(lm(data$Dauer ~ data$Region))
+# Sommaire de Durée
+summary(tourisme$Durée)
 
 ```
 ]
@@ -305,10 +199,119 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-data <- read.csv('1_Data/Tourismus.csv')
+tourisme <- read.csv("1_Data/tourisme.csv")
 
-# Comparaison de Besucher par Region
-anova(lm(data$Besucher ~ data$Region))
+# Correlation entre Durée et Visiteurs
+cor(tourisme$Durée, tourisme$Visiteurs)
+```
+]
+
+---
+
+# Statistiques
+
+.pull-left4[
+
+<ul>
+  <li class="m1g"><span>R(Studio)<br></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
+  <li class="m5"><span>Analyse</span></li>
+    <ul class="level">
+    <li><span><high>Statistiques simples</high></span></li>
+    <li><span>Graphiques simples</span></li>
+    </ul>
+</ul>
+
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r}
+# Charger des données dans un objet
+tourisme <- read.csv("1_Data/tourisme.csv")
+
+# Moyenne de Durée par Region
+aggregate(
+  tourisme$Durée ~ tourisme$Pays, 
+  FUN = mean) |>
+  head()
+```
+]
+
+---
+
+# Statistiques
+
+.pull-left4[
+
+<ul>
+  <li class="m1g"><span>R(Studio)<br></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
+  <li class="m5"><span>Analyse</span></li>
+    <ul class="level">
+    <li><span><high>Statistiques simples</high></span></li>
+    <li><span>Graphiques simples</span></li>
+    </ul>
+</ul>
+
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r}
+# Charger des données dans un objet
+tourisme <- read.csv("1_Data/tourisme.csv")
+
+# Comparaison de Durée par Pays
+anova(lm(tourisme$Durée ~ tourisme$Pays))
+
+```
+]
+
+---
+
+# Statistiques
+
+.pull-left4[
+
+<ul>
+  <li class="m1g"><span>R(Studio)<br></span></li>
+  <li class="m2g"><span>Assignations</span></li>
+  <li class="m3g"><span>Fonctions</span></li>
+  <li class="m4g"><span>Données I/O</a></span></li>
+  <li class="m5"><span>Analyse</span></li>
+    <ul class="level">
+    <li><span><high>Statistiques simples</high></span></li>
+    <li><span>Graphiques simples</span></li>
+    </ul>
+</ul>
+
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r}
+# Charger des données dans un objet
+tourisme <- read.csv("1_Data/tourisme.csv")
+
+# Comparaison de Visiteurs par Region
+anova(lm(tourisme$Visiteurs ~ tourisme$Region))
 
 ```
 ]
@@ -340,8 +343,8 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Histogramme Dauer
-hist(data$Dauer)
+# Histogramme Durée
+hist(tourisme$Durée)
 
 ```
 ]
@@ -373,8 +376,8 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Histogramme Besucher
-hist(data$Besucher)
+# Histogramme Visiteurs
+hist(tourisme$Visiteurs)
 
 ```
 ]
@@ -406,8 +409,8 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Diagramme de correlation Besucher x Dauer
-plot(data$Besucher, data$Dauer)
+# Diagramme de correlation Visiteurs x Durée
+plot(tourisme$Visiteurs, tourisme$Durée)
 
 ```
 ]
@@ -439,8 +442,9 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Diagramme de correlation Besucher (log) x Dauer (log)
-plot(data$Besucher, data$Dauer,
+# Diagramme de correlation 
+# Visiteurs (log) x Durée (log)
+plot(tourisme$Visiteurs, tourisme$Durée,
      log = "xy")
 
 ```
@@ -473,10 +477,11 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Diagramme de correlation Besucher (log) x Dauer (log)
-plot(data$Besucher, data$Dauer,
+# Diagramme de correlation 
+# Visiteurs (log) x Durée (log)
+plot(tourisme$Visiteurs, tourisme$Durée,
      log = "xy", col = 'red', pch = 16,
-     xlab = 'Besucher', ylab = 'Dauer')
+     xlab = 'Visiteurs', ylab = 'Durée')
 
 ```
 ]
@@ -508,8 +513,8 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Boite à moustaches Dauer (log) par Region
-boxplot(data$Dauer ~ data$Region,
+# Boite à moustaches Durée (log) par Region
+boxplot(tourisme$Durée ~ tourisme$Region,
         log="y")
 ```
 ]
@@ -541,8 +546,8 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Boite à moustaches Besucher (log) par Region
-boxplot(data$Besucher ~ data$Region,
+# Boite à moustaches Visiteurs (log) par Region
+boxplot(tourisme$Visiteurs ~ tourisme$Region,
         log="y")
 ```
 ]

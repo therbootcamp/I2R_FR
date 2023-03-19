@@ -1,12 +1,11 @@
-# load packages
+# charger libraries
 library(tidyverse)
 
-# load data
-baselers <- read_csv('data/baselers.csv')
+# charger les données
+baselers <- read_csv("1_Data/baselers.csv")
 
-# analyze
+# analyser les données
 summary(baselers)
 
-# regression
-lm(weight ~ sex,
-   data = baselers)
+# régréssion lineaire
+lm(weight ~ sex, data = baselers)

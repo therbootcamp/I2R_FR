@@ -8,6 +8,7 @@ editor_options:
 
 ```{r}
 library(readr)
+library(dplyr)
 ```
 
 
@@ -25,16 +26,130 @@ Sys.getlocale()
 # Tourismus.csv
 
 ```{r}
-data <- read.csv('1_Data/Tourismus.csv')
-head(data)
+getwd()
+tourisme <- read_csv("1_Data/Tourismus.csv")
+head(tourisme)
 
-names(data) <- c("Pays","Region","Année", "Visiteurs", "Durée")
-head(data)
+names(tourisme) <- c("Pays","Région","Année", "Visiteurs", "Durée")
+head(tourisme)
 
-class(data)
+class(tourisme)
 ```
 ```{r}
-write_csv(data, "_sessions/DataIO/1_Data/tourisme.csv")
+tourisme$Pays |> clipr::write_clip()
+
+Pays_fr <- c(
+  "Belgique", 
+  "Bulgarie", 
+  "Danemark",
+  "Allemagne",
+  "Estonie",
+  "Finlande",
+  "France",
+  "Grèce",
+  "Irlande",
+  "Islande",
+  "Italie",
+  "Croatie",
+  "Lettonie",
+  "Liechtenstein",
+  "Lituanie",
+  "Luxembourg",
+  "Malte",
+  "Pays-Bas",
+  "Norvège",
+  "Autriche",
+  "Pologne",
+  "Portugal",
+  "Roumanie",
+  "Russie",
+  "Suède",
+  "Serbie",
+  "Slovaquie",
+  "Slovénie",
+  "Espagne",
+  "République Tchèque",
+  "Turquie",
+  "Ukraine",
+  "Hongrie",
+  "Royaume-Uni",
+  "Biélorussie",
+  "Chypre",
+  "Reste de l'Europe",
+  "États-Unis",
+  "Canada","Mexique",
+  "Reste de l'Amérique Centrale, Caraïbes",
+  "Argentine",
+  "Brésil",
+  "Chili",
+  "Reste de l'Amérique du Sud",
+  "Égypte",
+  "Reste de l'Afrique du Nord",
+  "Afrique du Sud", 
+  "Reste de l'Afrique",
+  "Bahreïn",
+  "Chine", 
+  "République populaire Hong Kong",
+  "Inde",
+  "Indonésie",
+  "Israël",
+  "Japon",
+  "Qatar",
+  "Corée", 
+  "République de Koweït",
+  "Malaisie",
+  "Oman",
+  "Philippines",
+  "Arabie Saoudite",
+  "Singapour",
+  "Taiwan",
+  "Thaïlande",
+  "Reste de l'Asie du Sud et de l'Est",
+  "Reste de l'Asie occidentale",
+  "E.A.U",
+  "Australie",
+  "Nouvelle-Zélande et Océanie"
+  )
+
+tourisme <- tourisme |> 
+  mutate(Pays_fr = Pays_fr) |> 
+  relocate(Pays_fr)
+
+head(tourisme)
 ```
 
-# 
+```{r}
+tourisme <- tourisme |> 
+  mutate(Pays = Pays_fr) |> 
+  select(-Pays_fr)
+
+head(tourisme)
+```
+
+```{r}
+tourisme <- tourisme |> 
+  mutate(Région_fr = case_when(
+    Région == "Europa" ~ "Europe",
+    Région == "Amerika" ~ "Amerique",
+    Région == "Afrika" ~ "Afrique",
+    Région == "Asien" ~ "Asie",
+    Région == "Australien, Neuseeland, Ozeanien" ~ 
+      "Australie, Nouvelle-Zélande et Océanie",
+    TRUE ~ "not detected"
+  ))
+
+tourisme$Région_fr |> unique()
+```
+```{r}
+tourisme <- tourisme |> 
+  mutate(Région = Région_fr) |> 
+  select(-Région_fr)
+```
+
+```{r}
+write_csv(tourisme, "1_Data/tourisme.csv")
+write_csv(tourisme, "_sessions/DataIO/1_Data/tourisme.csv")
+write_csv(tourisme, "~/therbootcamp/I2R_FR_exercises/1_Data/tourisme.csv")
+```
+
+

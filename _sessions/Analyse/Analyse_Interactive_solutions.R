@@ -7,7 +7,7 @@
 ### Statistiques simplaes ----------------------------
 
 # Lire le fichier Tourismus.csv et l'assigner à l'objet `tourisme`
-tourisme <- read.csv("1_Data/tourisme.csv")
+tourisme <- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Calculer la moyenne (mean()) des variables Visiteurs et Durée
 mean(tourisme$Visiteurs)

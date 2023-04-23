@@ -11,10 +11,10 @@
 
 # Chargez les données en utilisant read.csv(). 
 # Rappellez-vous de l'astuce de la saisie automatique.
-read.csv("1_Data/tourisme.csv")
+read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Assurez-vous que les données sont stockées dans l'objet nommé 'tourisme'
-tourisme <- read.csv("1_Data/tourisme.csv")
+tourisme <- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 ### Les données "vivent" dans les data.frames ----------------------------
 

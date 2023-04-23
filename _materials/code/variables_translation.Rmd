@@ -11,7 +11,6 @@ library(readr)
 library(dplyr)
 ```
 
-
 # Locale
 
 ```{r}
@@ -27,7 +26,7 @@ Sys.getlocale()
 
 ```{r}
 getwd()
-tourisme <- read_csv("1_Data/Tourismus.csv")
+tourisme <- read_csv("./../../1_Data/Tourismus.csv")
 head(tourisme)
 
 names(tourisme) <- c("Pays","Région","Année", "Visiteurs", "Durée")

@@ -159,7 +159,7 @@ options(max.print=50)
 
 ```{r}
 # Charger des données et assigner à un objet
-tourisme <- read.csv('1_Data/tourisme.csv')
+tourisme <- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Voir les données
 head(tourisme)
@@ -286,7 +286,7 @@ options(max.print=20,width=40)
 
 ```{r}
 # Charger des données dans un objet
-tourisme <- read.csv('1_Data/tourisme.csv')
+tourisme <- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Classe des données
 class(tourisme)
@@ -359,7 +359,7 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-tourisme <- read.csv('1_Data/tourisme.csv')
+tourisme <- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Extraire une variable avec $
 tourisme$Durée
@@ -397,7 +397,7 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-tourisme <- read.csv('1_Data/tourisme.csv')
+tourisme <- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Extraire une variable avec $
 class(tourisme$Durée)
@@ -436,7 +436,7 @@ options(max.print=20,width=40)
 
 ```{r}
 # Charger des données dans un objet
-tourisme <- read.csv('1_Data/tourisme.csv')
+tourisme <- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Extraire une variable avec $
 tourisme$Pays
@@ -474,7 +474,7 @@ options(max.print=20,width=40)
 
 ```{r}
 # Charger des données dans un objet
-tourisme <- read.csv('1_Data/tourisme.csv')
+tourisme <- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Classe de la variable
 class(tourisme$Pays)

@@ -121,7 +121,7 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-tourisme <- read.csv("1_Data/tourisme.csv")
+tourisme <- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Moyenne de Durée
 mean(tourisme$Durée)
@@ -163,7 +163,7 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-tourisme <- read.csv("1_Data/tourisme.csv")
+tourisme <- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Sommaire de Durée
 summary(tourisme$Durée)
@@ -199,7 +199,7 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-tourisme <- read.csv("1_Data/tourisme.csv")
+tourisme <- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Correlation entre Durée et Visiteurs
 cor(tourisme$Durée, tourisme$Visiteurs)
@@ -234,7 +234,7 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-tourisme <- read.csv("1_Data/tourisme.csv")
+tourisme <- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Moyenne de Durée par Region
 aggregate(
@@ -272,7 +272,7 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-tourisme <- read.csv("1_Data/tourisme.csv")
+tourisme <- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Comparaison de Durée par Pays
 anova(lm(tourisme$Durée ~ tourisme$Pays))
@@ -308,7 +308,7 @@ options(max.print=80,width=40)
 
 ```{r}
 # Charger des données dans un objet
-tourisme <- read.csv("1_Data/tourisme.csv")
+tourisme <- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Comparaison de Visiteurs par Region
 anova(lm(tourisme$Visiteurs ~ tourisme$Region))

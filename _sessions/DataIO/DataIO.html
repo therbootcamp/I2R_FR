@@ -113,17 +113,17 @@ read.csv('1_Data/tourisme.csv')
 ```
 
 ```
-##            Pays Region Année Visiteurs Durée
-## 1       Belgien Europa  2018       920 1.727
-## 2     Bulgarien Europa  2018       138 2.101
-## 3      Dänemark Europa  2018       301 1.827
-## 4   Deutschland Europa  2018     10564 1.709
-## 5       Estland Europa  2018        24 2.125
-## 6      Finnland Europa  2018       130 2.008
-## 7    Frankreich Europa  2018      3401 1.555
-## 8  Griechenland Europa  2018       195 2.651
-## 9        Irland Europa  2018       374 2.332
-## 10       Island Europa  2018        32 1.781
+##         Pays RÃ.gion AnnÃ.e Visiteurs DurÃ.e
+## 1   Belgique  Europe   2018       920  1.727
+## 2   Bulgarie  Europe   2018       138  2.101
+## 3   Danemark  Europe   2018       301  1.827
+## 4  Allemagne  Europe   2018     10564  1.709
+## 5    Estonie  Europe   2018        24  2.125
+## 6   Finlande  Europe   2018       130  2.008
+## 7     France  Europe   2018      3401  1.555
+## 8     GrÃ¨ce  Europe   2018       195  2.651
+## 9    Irlande  Europe   2018       374  2.332
+## 10   Islande  Europe   2018        32  1.781
 ##  [ reached 'max' / getOption("max.print") -- omitted 61 rows ]
 ```
 ]
@@ -157,20 +157,20 @@ read.csv('1_Data/tourisme.csv')
 
 ```r
 # Charger des données et assigner à un objet
-tourisme &lt;- read.csv('1_Data/tourisme.csv')
+tourisme &lt;- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Voir les données
 head(tourisme)
 ```
 
 ```
-##          Pays Region Année Visiteurs Durée
-## 1     Belgien Europa  2018       920 1.727
-## 2   Bulgarien Europa  2018       138 2.101
-## 3    Dänemark Europa  2018       301 1.827
-## 4 Deutschland Europa  2018     10564 1.709
-## 5     Estland Europa  2018        24 2.125
-## 6    Finnland Europa  2018       130 2.008
+##        Pays Région Année Visiteurs Durée
+## 1  Belgique Europe  2018       920 1.727
+## 2  Bulgarie Europe  2018       138 2.101
+## 3  Danemark Europe  2018       301 1.827
+## 4 Allemagne Europe  2018     10564 1.709
+## 5   Estonie Europe  2018        24 2.125
+## 6  Finlande Europe  2018       130 2.008
 ```
 ]
 
@@ -292,7 +292,7 @@ head(tourisme)
 
 ```r
 # Charger des données dans un objet
-tourisme &lt;- read.csv('1_Data/tourisme.csv')
+tourisme &lt;- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Classe des données
 class(tourisme)
@@ -315,7 +315,7 @@ names(tourisme) # Noms des variables
 ```
 
 ```
-## [1] "Pays"      "Region"    "Année"    
+## [1] "Pays"      "Région"    "Année"    
 ## [4] "Visiteurs" "Durée"
 ```
 ]
@@ -380,7 +380,7 @@ names(tourisme) # Noms des variables
 
 ```r
 # Charger des données dans un objet
-tourisme &lt;- read.csv('1_Data/tourisme.csv')
+tourisme &lt;- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Extraire une variable avec $
 tourisme$Durée
@@ -431,7 +431,7 @@ tourisme$Durée
 
 ```r
 # Charger des données dans un objet
-tourisme &lt;- read.csv('1_Data/tourisme.csv')
+tourisme &lt;- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Extraire une variable avec $
 class(tourisme$Durée)
@@ -472,23 +472,23 @@ class(tourisme$Durée)
 
 ```r
 # Charger des données dans un objet
-tourisme &lt;- read.csv('1_Data/tourisme.csv')
+tourisme &lt;- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Extraire une variable avec $
 tourisme$Pays
 ```
 
 ```
-##  [1] "Belgien"       "Bulgarien"    
-##  [3] "Dänemark"      "Deutschland"  
-##  [5] "Estland"       "Finnland"     
-##  [7] "Frankreich"    "Griechenland" 
-##  [9] "Irland"        "Island"       
-## [11] "Italien"       "Kroatien"     
-## [13] "Lettland"      "Liechtenstein"
-## [15] "Litauen"       "Luxemburg"    
-## [17] "Malta"         "Niederlande"  
-## [19] "Norwegen"      "Österreich"   
+##  [1] "Belgique"      "Bulgarie"     
+##  [3] "Danemark"      "Allemagne"    
+##  [5] "Estonie"       "Finlande"     
+##  [7] "France"        "Grèce"        
+##  [9] "Irlande"       "Islande"      
+## [11] "Italie"        "Croatie"      
+## [13] "Lettonie"      "Liechtenstein"
+## [15] "Lituanie"      "Luxembourg"   
+## [17] "Malte"         "Pays-Bas"     
+## [19] "Norvège"       "Autriche"     
 ##  [ reached getOption("max.print") -- omitted 51 entries ]
 ```
 ]
@@ -522,7 +522,7 @@ tourisme$Pays
 
 ```r
 # Charger des données dans un objet
-tourisme &lt;- read.csv('1_Data/tourisme.csv')
+tourisme &lt;- read.csv('1_Data/tourisme.csv', fileEncoding = "UTF-8")
 
 # Classe de la variable
 class(tourisme$Pays)

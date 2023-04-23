@@ -105,7 +105,7 @@ layout: true
 
 ```r
 # Charger des données dans un objet
-tourisme &lt;- read.csv("1_Data/tourisme.csv")
+tourisme &lt;- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Moyenne de Durée
 mean(tourisme$Durée)
@@ -161,7 +161,7 @@ sd(tourisme$Durée)
 
 ```r
 # Charger des données dans un objet
-tourisme &lt;- read.csv("1_Data/tourisme.csv")
+tourisme &lt;- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Sommaire de Durée
 summary(tourisme$Durée)
@@ -202,7 +202,7 @@ summary(tourisme$Durée)
 
 ```r
 # Charger des données dans un objet
-tourisme &lt;- read.csv("1_Data/tourisme.csv")
+tourisme &lt;- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Correlation entre Durée et Visiteurs
 cor(tourisme$Durée, tourisme$Visiteurs)
@@ -240,7 +240,7 @@ cor(tourisme$Durée, tourisme$Visiteurs)
 
 ```r
 # Charger des données dans un objet
-tourisme &lt;- read.csv("1_Data/tourisme.csv")
+tourisme &lt;- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Moyenne de Durée par Region
 aggregate(
@@ -287,17 +287,16 @@ aggregate(
 
 ```r
 # Charger des données dans un objet
-tourisme &lt;- read.csv("1_Data/tourisme.csv")
+tourisme &lt;- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Comparaison de Durée par Pays
 anova(lm(tourisme$Durée ~ tourisme$Pays))
 ```
 
 ```
-## Warning in anova.lm(lm(tourisme$Durée ~
-## tourisme$Pays)): Les tests F d'ANOVA sur
-## un ajustement pratiquement parfait ne
-## sont pas fiables
+## Warning in anova.lm(lm(tourisme$Durée
+## ~ tourisme$Pays)): ANOVA F-tests on an
+## essentially perfect fit are unreliable
 ```
 
 ```
@@ -340,7 +339,7 @@ anova(lm(tourisme$Durée ~ tourisme$Pays))
 
 ```r
 # Charger des données dans un objet
-tourisme &lt;- read.csv("1_Data/tourisme.csv")
+tourisme &lt;- read.csv("1_Data/tourisme.csv", fileEncoding = "UTF-8")
 
 # Comparaison de Visiteurs par Region
 anova(lm(tourisme$Visiteurs ~ tourisme$Region))

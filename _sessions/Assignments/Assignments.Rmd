@@ -75,9 +75,9 @@ library(tidyverse)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2"><span><high>Assignations</high><br></span></li>
   <ul class="level">
-    <li><span>Object <mono><-</mono> Fonction</span></li>
-    <li><span><mono><-</mono> crée un Object</span></li>
-    <li><span><mono><-</mono> change un Objekte</span></li>
+    <li><span>Objet <mono><-</mono> Fonction</span></li>
+    <li><span><mono><-</mono> crée un Objet</span></li>
+    <li><span><mono><-</mono> change un Objet</span></li>
   </ul>
   </span><br>
   <li class="m3g"><span>Fonctions</span></li>
@@ -98,7 +98,7 @@ library(tidyverse)
 
 ---
 
-# Object <mono><-</mono> Fonction
+# Objet <mono><-</mono> Fonction
 
 .pull-left5[
 
@@ -106,9 +106,9 @@ library(tidyverse)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span><high>Object <mono><-</mono> Fonction</high></span></li>
-    <li><span><mono><-</mono> crée un Object</span></li>
-    <li><span><mono><-</mono> change un Object</span></li>
+    <li><span><high>Objet <mono><-</mono> Fonction</high></span></li>
+    <li><span><mono><-</mono> crée un Objet</span></li>
+    <li><span><mono><-</mono> change un Objet</span></li>
   </ul>
   </span><br>
   <li class="m3g"><span>Fonctions</span></li>
@@ -129,7 +129,7 @@ library(tidyverse)
 
 ---
 
-# <mono><-</mono> crée un Object
+# <mono><-</mono> crée un Objet
 
 .pull-left5[
 
@@ -137,9 +137,9 @@ library(tidyverse)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span>Object <mono><-</mono> Fonction</span></li>
-    <li><span><high><mono><-</mono> crée un Object</high></span></li>
-    <li><span><mono><-</mono> change un Object</span></li>
+    <li><span>Objet <mono><-</mono> Fonction</span></li>
+    <li><span><high><mono><-</mono> crée un Objet</high></span></li>
+    <li><span><mono><-</mono> change un Objet</span></li>
   </ul>
   </span><br>
   <li class="m3g"><span>Fonctions</span></li>
@@ -151,13 +151,13 @@ library(tidyverse)
 
 .pull-right5[
 ```{r}
-# un object nommé one_two_three
+# un objet nommé one_two_three
 one_two_three <- c(1, 2, 3)
 
-# imprimer l'object
+# imprimer l'objet
 print(one_two_three)
 
-# imprimer l'object
+# imprimer l'objet
 one_two_three
 
 ```
@@ -166,7 +166,7 @@ one_two_three
 
 ---
 
-# <mono><-</mono> crée un Object
+# <mono><-</mono> crée un Objet
 
 .pull-left5[
 
@@ -174,9 +174,9 @@ one_two_three
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span>Object <mono><-</mono> Fonction</span></li>
-    <li><span><high><mono><-</mono> crée un Object</high></span></li>
-    <li><span><mono><-</mono> change un Object</span></li>
+    <li><span>Objet <mono><-</mono> Fonction</span></li>
+    <li><span><high><mono><-</mono> crée un Objet</high></span></li>
+    <li><span><mono><-</mono> change un Objet</span></li>
   </ul>
   </span><br>
   <li class="m3g"><span>Fonctions</span></li>
@@ -188,7 +188,7 @@ one_two_three
 
 .pull-right5[
 ```{r}
-# un object nommé one_two_three
+# un objet nommé one_two_three
 one_two_three <- c(1, 2, 3)
 
 # calculer la moyenne
@@ -199,7 +199,7 @@ mean(one_two_three)
 
 ---
 
-# <mono><-</mono> crée un Object
+# <mono><-</mono> crée un Objet
 
 .pull-left5[
 
@@ -207,9 +207,9 @@ mean(one_two_three)
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span>Object <mono><-</mono> Fonction</span></li>
-    <li><span><high><mono><-</mono> crée un Object</high></span></li>
-    <li><span><mono><-</mono> change un Object</span></li>
+    <li><span>Objet <mono><-</mono> Fonction</span></li>
+    <li><span><high><mono><-</mono> crée un Objet</high></span></li>
+    <li><span><mono><-</mono> change un Objet</span></li>
   </ul>
   </span><br>
   <li class="m3g"><span>Fonctions</span></li>
@@ -221,7 +221,7 @@ mean(one_two_three)
 
 .pull-right5[
 ```{r}
-# un object nommé one_two_three
+# un objet nommé one_two_three
 one_two_three <- c(1, 2, 3)
 
 # calculer la moyenne
@@ -235,7 +235,7 @@ result
 
 ---
 
-# <mono><-</mono> crée un Object
+# <mono><-</mono> crée un Objet
 
 .pull-left5[
 
@@ -243,9 +243,9 @@ result
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span>Object <mono><-</mono> Fonction</span></li>
-    <li><span><high><mono><-</mono> crée un Object</high></span></li>
-    <li><span><mono><-</mono> change un Object</span></li>
+    <li><span>Objet <mono><-</mono> Fonction</span></li>
+    <li><span><high><mono><-</mono> crée un Objet</high></span></li>
+    <li><span><mono><-</mono> change un Objet</span></li>
   </ul>
   </span><br>
   <li class="m3g"><span>Fonctions</span></li>
@@ -257,7 +257,7 @@ result
 
 .pull-right5[
 ```{r}
-# un object nommé one_two_three
+# un objet nommé one_two_three
 one_two_three <- c(1, 2, 3)
 
 # calculer la moyenne
@@ -272,7 +272,7 @@ result * 10
 
 ---
 
-# <mono><-</mono> change un Object
+# <mono><-</mono> change un Objet
 
 .pull-left5[
 
@@ -280,9 +280,9 @@ result * 10
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span>Object <mono><-</mono> Fonction</span></li>
-    <li><span><mono><-</mono> crée un Object</span></li>
-    <li><span><high><mono><-</mono> change un Object</high></span></li>
+    <li><span>Objet <mono><-</mono> Fonction</span></li>
+    <li><span><mono><-</mono> crée un Objet</span></li>
+    <li><span><high><mono><-</mono> change un Objet</high></span></li>
   </ul>
   </span><br>
   <li class="m3g"><span>Fonctions</span></li>
@@ -294,16 +294,16 @@ result * 10
 
 .pull-right5[
 ```{r}
-# un object nommé one_two_three
+# un objet nommé one_two_three
 one_two_three <- c(1, 2, 3)
 
-# imprimer l'object
+# imprimer l'objet
 one_two_three
 
-# imprimer l'object + 100
+# imprimer l'objet + 100
 one_two_three + 100
 
-# imprimer l'object
+# imprimer l'objet
 one_two_three
 
 ```
@@ -313,7 +313,7 @@ one_two_three
 
 ---
 
-# <mono><-</mono> change un Object
+# <mono><-</mono> change un Objet
 
 .pull-left5[
 
@@ -321,9 +321,9 @@ one_two_three
   <li class="m1g"><span>R(Studio)</span></li>
   <li class="m2"><span>Assignations<br></span></li>
   <ul class="level">
-    <li><span>Object <mono><-</mono> Fonction</span></li>
-    <li><span><mono><-</mono> crée un Object</span></li>
-    <li><span><high><mono><-</mono> change un Object</high></span></li>
+    <li><span>Objet <mono><-</mono> Fonction</span></li>
+    <li><span><mono><-</mono> crée un Objet</span></li>
+    <li><span><high><mono><-</mono> change un Objet</high></span></li>
   </ul>
   </span><br>
   <li class="m3g"><span>Fonctions</span></li>
@@ -335,16 +335,16 @@ one_two_three
 
 .pull-right5[
 ```{r}
-# un object nommé one_two_three
+# un objet nommé one_two_three
 one_two_three <- c(1, 2, 3)
 
-# imprimer l'object
+# imprimer l'objet
 one_two_three
 
-# changer l'object
+# changer l'objet
 one_two_three <- one_two_three + 100
 
-# imprimer l'object
+# imprimer l'objet
 one_two_three
 
 ```
